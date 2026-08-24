@@ -8,7 +8,6 @@ import {
   SunMedium,
   Cpu,
   Wifi,
-  ToggleRight,
   ShieldCheck,
   ChevronLeft,
   ChevronRight,
@@ -157,11 +156,6 @@ export default function SmartHomes() {
                   <p className="text-xs text-[#5A6474] leading-relaxed">
                     {feat.desc}
                   </p>
-                </div>
-
-                <div className="pt-4 mt-6 border-t border-black/5 flex items-center justify-between text-[11px] text-[#A85D45] font-semibold">
-                  <span>Active Module</span>
-                  <ToggleRight className="w-4 h-4 text-[#A85D45]" />
                 </div>
               </div>
             )
