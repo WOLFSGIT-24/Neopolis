@@ -50,9 +50,6 @@ export default function ExperienceIntro() {
             <span className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#A85D45] font-semibold">
               Architectural Layers
             </span>
-            <span className="text-xs text-[#5A6474] font-mono font-medium">
-              01 to 07
-            </span>
           </div>
 
           {/* Ribbon items with smooth horizontal scroll on mobile */}
