@@ -73,9 +73,10 @@ export default function StatisticsSection() {
 
         {/* Project Highlights Breakdown List */}
         <div className="rounded-2xl p-6 sm:p-8 bg-[#F3ECE2] border border-[#A85D45]/20 shadow-sm">
-          <div className="flex items-center gap-2 mb-6">
+          {/* Centered Highlights Subheading */}
+          <div className="flex items-center justify-center gap-2 mb-8 text-center">
             <Sparkles className="w-4 h-4 text-[#A85D45]" />
-            <h3 className="text-xs uppercase tracking-[0.25em] text-[#10141E] font-semibold">
+            <h3 className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#10141E] font-semibold">
               Architectural Highlights & Engineering Excellence
             </h3>
           </div>
