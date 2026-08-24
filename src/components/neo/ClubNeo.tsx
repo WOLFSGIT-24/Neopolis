@@ -209,11 +209,11 @@ export default function ClubNeo() {
               <h4 className="text-[11px] sm:text-xs uppercase tracking-[0.2em] text-[#A85D45] font-semibold mb-4 text-center">
                 Level Inclusions & Amenities
               </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-4 max-w-2xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-left">
                 {current.facilities.map((fac, idx) => (
-                  <div key={idx} className="flex items-center justify-center gap-2 text-xs sm:text-sm text-[#10141E] text-center">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#A85D45] shrink-0" />
-                    <span>{fac}</span>
+                  <div key={idx} className="flex items-start justify-start gap-2.5 text-xs sm:text-sm text-[#10141E] text-left">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#A85D45] shrink-0 mt-1.5" />
+                    <span className="text-left leading-snug">{fac}</span>
                   </div>
                 ))}
               </div>
