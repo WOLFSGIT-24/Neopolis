@@ -206,7 +206,7 @@ export default function ClubNeo() {
 
             {/* Floor Facilities Grid */}
             <div className="p-4 sm:p-6 lg:p-8 rounded-2xl bg-white border border-[#A85D45]/20 shadow-md">
-              <h4 className="text-[11px] sm:text-xs uppercase tracking-[0.2em] text-[#A85D45] font-semibold mb-3">
+              <h4 className="text-[11px] sm:text-xs uppercase tracking-[0.2em] text-[#A85D45] font-semibold mb-4 text-center">
                 Level Inclusions & Amenities
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3.5">
