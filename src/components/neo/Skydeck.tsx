@@ -52,26 +52,23 @@ export default function Skydeck() {
   ]
 
   return (
-    <section id="skydeck" className="relative w-full py-28 sm:py-36 bg-[#080B10] text-neo-ivory overflow-hidden border-t border-[#C98D78]/25">
-      {/* Background Starry Glow & Horizon Blur */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[400px] bg-gradient-to-b from-[#18243A]/40 via-transparent to-transparent pointer-events-none" />
-
+    <section id="skydeck" className="relative w-full py-28 sm:py-36 bg-[#F3ECE2] text-[#10141E] overflow-hidden border-t border-[#A85D45]/15">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Editorial Heading */}
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#18243A]/60 border border-[#C98D78]/30 backdrop-blur-md">
-            <Sparkles className="w-3.5 h-3.5 text-[#C98D78]" />
-            <span className="text-[11px] uppercase tracking-[0.3em] text-[#E8C5B8] font-light">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#A85D45]/30 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#A85D45]" />
+            <span className="text-[11px] uppercase tracking-[0.3em] text-[#A85D45] font-semibold">
               Levels 58 & 59 • The Stratosphere Layer
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif font-light text-white leading-[1.05]">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
             SKYDECK <br />
-            <span className="italic text-neo-peach font-normal">Life between the clouds.</span>
+            <span className="italic text-[#A85D45] font-normal">Life between the clouds.</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-neo-muted max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-[#5A6474] max-w-xl mx-auto">
             Perched 57 stories above the earth, the Skydeck is an extraordinary rooftop realm where everyday boundaries dissolve into boundless horizons.
           </p>
         </div>
@@ -79,27 +76,27 @@ export default function Skydeck() {
         {/* Featured Showcase & Interactive Strip */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-12">
           {/* Main Visual Display */}
-          <div className="lg:col-span-8 relative aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden border border-[#C98D78]/40 shadow-2xl bg-[#10131A] group">
+          <div className="lg:col-span-8 relative aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden border border-[#A85D45]/25 shadow-xl bg-white group">
             <Image
               src={skyFeatures[activeItem].image}
               alt={skyFeatures[activeItem].title}
               fill
               className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
 
-            <div className="absolute top-5 left-5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-xs text-[#C98D78] font-mono">
+            <div className="absolute top-5 left-5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#A85D45]/20 text-xs text-[#A85D45] font-mono font-semibold shadow-md">
               0{activeItem + 1} / 0{skyFeatures.length} • Skydeck Sanctuary
             </div>
 
             <div className="absolute bottom-6 left-6 right-6 space-y-1.5">
-              <span className="text-xs uppercase tracking-[0.2em] text-[#C98D78] font-mono">
+              <span className="text-xs uppercase tracking-[0.2em] text-[#E8C5B8] font-mono font-semibold">
                 {skyFeatures[activeItem].tagline}
               </span>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white font-medium">
                 {skyFeatures[activeItem].title}
               </h3>
-              <p className="text-xs sm:text-sm text-neo-muted max-w-2xl leading-relaxed pt-1">
+              <p className="text-xs sm:text-sm text-white/90 max-w-2xl leading-relaxed pt-1">
                 {skyFeatures[activeItem].desc}
               </p>
             </div>
@@ -107,7 +104,7 @@ export default function Skydeck() {
 
           {/* Interactive Navigation List */}
           <div className="lg:col-span-4 space-y-2.5">
-            <div className="text-xs uppercase tracking-[0.25em] text-[#C98D78] font-medium mb-3">
+            <div className="text-xs uppercase tracking-[0.25em] text-[#A85D45] font-semibold mb-3">
               Skydeck Attractions
             </div>
 
@@ -119,25 +116,25 @@ export default function Skydeck() {
                   <button
                     key={idx}
                     onClick={() => setActiveItem(idx)}
-                    className={`w-full p-3.5 rounded-xl text-left transition-all duration-300 flex items-center justify-between border ${
+                    className={`w-full p-3.5 rounded-xl text-left transition-all duration-300 flex items-center justify-between border shadow-sm ${
                       isActive
-                        ? 'bg-[#18243A] border-[#C98D78] shadow-lg shadow-[#C98D78]/15 translate-x-1'
-                        : 'bg-[#121620]/60 border-white/5 hover:border-white/20 text-neo-muted hover:text-white'
+                        ? 'bg-white border-[#A85D45] shadow-md ring-1 ring-[#A85D45] translate-x-1'
+                        : 'bg-white/80 border-[#A85D45]/15 hover:border-[#A85D45]/50 text-[#5A6474] hover:text-[#10141E]'
                     }`}
                   >
                     <div className="flex items-center gap-3">
                       <div
                         className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                          isActive ? 'bg-[#C98D78] text-[#10131A]' : 'bg-white/5 text-[#C98D78]'
+                          isActive ? 'bg-[#A85D45] text-white' : 'bg-[#F5EBE6] text-[#A85D45]'
                         }`}
                       >
                         <Icon className="w-4 h-4" />
                       </div>
                       <div>
-                        <span className="text-[10px] font-mono text-[#C98D78] block">
+                        <span className="text-[10px] font-mono text-[#A85D45] font-bold block">
                           0{idx + 1}
                         </span>
-                        <h4 className={`text-sm font-serif ${isActive ? 'text-white font-medium' : 'text-neo-muted'}`}>
+                        <h4 className={`text-sm font-serif ${isActive ? 'text-[#10141E] font-semibold' : 'text-[#5A6474]'}`}>
                           {item.title}
                         </h4>
                       </div>
@@ -145,7 +142,7 @@ export default function Skydeck() {
 
                     <ArrowRight
                       className={`w-3.5 h-3.5 transition-transform ${
-                        isActive ? 'text-[#C98D78] translate-x-1' : 'text-white/20'
+                        isActive ? 'text-[#A85D45] translate-x-1' : 'text-[#8C97A7]'
                       }`}
                     />
                   </button>

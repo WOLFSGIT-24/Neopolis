@@ -52,34 +52,34 @@ export default function TermsConditionsModal() {
   ]
 
   return (
-    <div className="fixed inset-0 z-[105] flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md">
+    <div className="fixed inset-0 z-[105] flex items-center justify-center p-4 sm:p-6 bg-black/75 backdrop-blur-md">
       <div
-        className="relative w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden rounded-2xl bg-[#121722] border border-[#C98D78]/30 shadow-2xl text-neo-ivory"
+        className="relative w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden rounded-2xl bg-white border border-[#A85D45]/30 shadow-2xl text-[#10141E]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-white/10 bg-[#18243A]/50">
+        <div className="flex items-center justify-between px-6 py-5 border-b border-[#A85D45]/15 bg-[#FAF7F2]">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-[#C98D78]/20 flex items-center justify-center text-[#C98D78]">
+            <div className="w-9 h-9 rounded-lg bg-[#F5EBE6] flex items-center justify-center text-[#A85D45]">
               <FileText className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-serif text-white">Price Details & Statutory Terms</h3>
-              <p className="text-xs text-neo-muted">Project RERA: P02400010006</p>
+              <h3 className="text-xl font-serif text-[#10141E] font-medium">Price Details & Statutory Terms</h3>
+              <p className="text-xs text-[#5A6474]">Project RERA: P02400010006</p>
             </div>
           </div>
           <button
             onClick={closeTerms}
-            className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-neo-muted hover:text-white transition-colors"
+            className="p-2 rounded-lg bg-white hover:bg-black/5 text-[#5A6474] hover:text-[#10141E] transition-colors border border-[#A85D45]/15"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Scrollable Content */}
-        <div className="flex-1 overflow-y-auto p-6 space-y-4 text-xs text-neo-ivory/80 leading-relaxed">
-          <div className="p-3.5 rounded-lg bg-[#C98D78]/10 border border-[#C98D78]/20 flex items-start gap-3 text-neo-peach text-xs">
-            <AlertCircle className="w-4 h-4 text-[#C98D78] shrink-0 mt-0.5" />
+        <div className="flex-1 overflow-y-auto p-6 space-y-4 text-xs text-[#10141E]/90 leading-relaxed">
+          <div className="p-3.5 rounded-lg bg-[#FAF7F2] border border-[#A85D45]/20 flex items-start gap-3 text-[#A85D45] text-xs font-medium">
+            <AlertCircle className="w-4 h-4 text-[#A85D45] shrink-0 mt-0.5" />
             <p>
               Please read these statutory project purchase guidelines carefully. All financial schedules adhere to the Telangana Real Estate Regulatory Authority (TG RERA) framework.
             </p>
@@ -87,26 +87,26 @@ export default function TermsConditionsModal() {
 
           <div className="space-y-4 pt-2">
             {clauses.map((clause, idx) => (
-              <div key={idx} className="border-b border-white/5 pb-3">
-                <h4 className="font-semibold text-white text-sm mb-1 flex items-center gap-2">
-                  <span className="text-[#C98D78] text-xs font-mono">{String(idx + 1).padStart(2, '0')}.</span>
+              <div key={idx} className="border-b border-black/5 pb-3">
+                <h4 className="font-semibold text-[#10141E] text-sm mb-1 flex items-center gap-2">
+                  <span className="text-[#A85D45] text-xs font-mono">{String(idx + 1).padStart(2, '0')}.</span>
                   {clause.title}
                 </h4>
-                <p className="text-neo-muted pl-6">{clause.content}</p>
+                <p className="text-[#5A6474] pl-6">{clause.content}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Footer */}
-        <div className="flex items-center justify-between px-6 py-4 border-t border-white/10 bg-[#18243A]/50">
-          <div className="flex items-center gap-2 text-[11px] text-neo-muted">
-            <ShieldCheck className="w-4 h-4 text-emerald-400" />
+        <div className="flex items-center justify-between px-6 py-4 border-t border-[#A85D45]/15 bg-[#FAF7F2]">
+          <div className="flex items-center gap-2 text-[11px] text-[#5A6474]">
+            <ShieldCheck className="w-4 h-4 text-emerald-600" />
             <span>TG RERA Registered Project</span>
           </div>
           <button
             onClick={closeTerms}
-            className="px-5 py-2 rounded-lg bg-[#C98D78] text-[#10131A] font-semibold text-xs uppercase tracking-wider hover:bg-[#E8C5B8] transition-colors"
+            className="px-5 py-2 rounded-lg bg-gradient-to-r from-[#C98D78] via-[#B8735C] to-[#A85D45] text-white font-semibold text-xs uppercase tracking-wider hover:opacity-90 transition-colors shadow-md"
           >
             I Understand
           </button>

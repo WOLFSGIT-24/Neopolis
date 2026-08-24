@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { Sparkles, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function LifeAtNeo() {
   const [activeIdx, setActiveIdx] = useState(0)
@@ -48,26 +48,26 @@ export default function LifeAtNeo() {
   }
 
   return (
-    <section id="life-at-neo" className="relative w-full py-24 sm:py-32 bg-[#10131A] text-neo-ivory overflow-hidden">
+    <section id="life-at-neo" className="relative w-full py-24 sm:py-32 bg-[#FAF7F2] text-[#10141E] overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* Editorial Statement */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end mb-16">
           <div className="lg:col-span-6 space-y-3">
-            <span className="text-xs uppercase tracking-[0.3em] text-[#C98D78] font-medium block">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#A85D45] font-semibold block">
               02 • Lifestyle Architecture
             </span>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif font-light text-white leading-[1.05]">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
               Life, <br />
-              <span className="italic text-neo-peach font-normal">elevated.</span>
+              <span className="italic text-[#A85D45] font-normal">elevated.</span>
             </h2>
           </div>
 
-          <div className="lg:col-span-6 space-y-4 lg:pl-8 lg:border-l border-white/10">
-            <p className="text-base sm:text-lg text-neo-ivory/90 font-serif leading-relaxed">
+          <div className="lg:col-span-6 space-y-4 lg:pl-8 lg:border-l border-black/10">
+            <p className="text-base sm:text-lg text-[#10141E]/90 font-serif leading-relaxed">
               Every layer of Neo is designed to make everyday living feel extraordinary — from landscaped gardens at ground level to private experiences high above the city.
             </p>
             <div className="flex items-center gap-4 pt-2">
-              <span className="text-xs uppercase tracking-[0.2em] text-[#C98D78] font-medium">
+              <span className="text-xs uppercase tracking-[0.2em] text-[#A85D45] font-semibold">
                 Ground Level: Shaped by what you love
               </span>
             </div>
@@ -77,7 +77,7 @@ export default function LifeAtNeo() {
         {/* Interactive Showcase with Carousel Controls */}
         <div className="relative">
           {/* Main Featured Showcase Card */}
-          <div className="relative rounded-2xl overflow-hidden border border-[#C98D78]/25 shadow-2xl bg-[#18243A]">
+          <div className="relative rounded-2xl overflow-hidden border border-[#A85D45]/20 shadow-xl bg-white">
             <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[480px]">
               {/* Image side */}
               <div className="lg:col-span-8 relative min-h-[320px] sm:min-h-[420px] overflow-hidden">
@@ -87,28 +87,28 @@ export default function LifeAtNeo() {
                   fill
                   className="object-cover object-center transition-all duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/50 via-transparent to-transparent" />
               </div>
 
               {/* Text info side */}
-              <div className="lg:col-span-4 p-8 sm:p-10 flex flex-col justify-between bg-[#141A26] border-t lg:border-t-0 lg:border-l border-white/10">
+              <div className="lg:col-span-4 p-8 sm:p-10 flex flex-col justify-between bg-white border-t lg:border-t-0 lg:border-l border-[#A85D45]/15">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono text-[#C98D78]">
+                    <span className="text-xs font-mono text-[#A85D45] font-bold">
                       0{activeIdx + 1} / 0{groundSpaces.length}
                     </span>
-                    <span className="text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-white/5 text-neo-peach border border-white/10">
+                    <span className="text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-[#F5EBE6] text-[#A85D45] border border-[#A85D45]/20 font-semibold">
                       Podium Landscape
                     </span>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl font-serif text-white font-normal">
+                  <h3 className="text-2xl sm:text-3xl font-serif text-[#10141E] font-medium">
                     {groundSpaces[activeIdx].title}
                   </h3>
-                  <p className="text-xs uppercase tracking-wider text-[#C98D78] font-medium">
+                  <p className="text-xs uppercase tracking-wider text-[#A85D45] font-semibold">
                     {groundSpaces[activeIdx].subtitle}
                   </p>
-                  <p className="text-xs sm:text-sm text-neo-muted leading-relaxed pt-2">
+                  <p className="text-xs sm:text-sm text-[#5A6474] leading-relaxed pt-2">
                     {groundSpaces[activeIdx].desc}
                   </p>
                 </div>
@@ -118,14 +118,14 @@ export default function LifeAtNeo() {
                   <button
                     onClick={handlePrev}
                     aria-label="Previous space"
-                    className="p-3 rounded-full bg-white/5 hover:bg-[#C98D78] hover:text-[#10131A] text-white border border-white/10 transition-colors"
+                    className="p-3 rounded-full bg-[#F3ECE2] hover:bg-[#A85D45] hover:text-white text-[#10141E] border border-[#A85D45]/20 transition-colors shadow-sm"
                   >
                     <ChevronLeft className="w-4 h-4" />
                   </button>
                   <button
                     onClick={handleNext}
                     aria-label="Next space"
-                    className="p-3 rounded-full bg-white/5 hover:bg-[#C98D78] hover:text-[#10131A] text-white border border-white/10 transition-colors"
+                    className="p-3 rounded-full bg-[#F3ECE2] hover:bg-[#A85D45] hover:text-white text-[#10141E] border border-[#A85D45]/20 transition-colors shadow-sm"
                   >
                     <ChevronRight className="w-4 h-4" />
                   </button>
@@ -140,14 +140,14 @@ export default function LifeAtNeo() {
               <button
                 key={idx}
                 onClick={() => setActiveIdx(idx)}
-                className={`p-2.5 rounded-xl text-left transition-all duration-300 border ${
+                className={`p-2.5 rounded-xl text-left transition-all duration-300 border shadow-sm ${
                   activeIdx === idx
-                    ? 'bg-[#18243A] border-[#C98D78] shadow-lg'
-                    : 'bg-[#121722]/60 border-white/5 hover:border-white/20'
+                    ? 'bg-white border-[#A85D45] shadow-md ring-1 ring-[#A85D45]'
+                    : 'bg-white/80 border-[#A85D45]/15 hover:border-[#A85D45]/50'
                 }`}
               >
-                <span className="text-[10px] font-mono text-[#C98D78] block">0{idx + 1}</span>
-                <span className="text-xs font-serif text-white line-clamp-1 mt-0.5">{item.title}</span>
+                <span className="text-[10px] font-mono text-[#A85D45] font-bold block">0{idx + 1}</span>
+                <span className="text-xs font-serif text-[#10141E] line-clamp-1 mt-0.5 font-medium">{item.title}</span>
               </button>
             ))}
           </div>

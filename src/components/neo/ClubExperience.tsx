@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import { Sparkles, Film, Heart, BookOpen, Waves, Dumbbell } from 'lucide-react'
+import { Film, Heart, BookOpen, Waves, Dumbbell } from 'lucide-react'
 
 export default function ClubExperience() {
   const experiences = [
@@ -43,20 +43,20 @@ export default function ClubExperience() {
   ]
 
   return (
-    <section className="relative w-full py-24 sm:py-32 bg-[#121620] text-neo-ivory overflow-hidden">
+    <section className="relative w-full py-24 sm:py-32 bg-[#F3ECE2] text-[#10141E] overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="space-y-3">
-            <span className="text-xs uppercase tracking-[0.3em] text-[#C98D78] font-medium block">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#A85D45] font-semibold block">
               Immersive Spaces
             </span>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-white leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-[#10141E] leading-tight">
               Curated club <br />
-              <span className="italic text-neo-peach font-normal">experiences.</span>
+              <span className="italic text-[#A85D45] font-normal">experiences.</span>
             </h2>
           </div>
-          <p className="text-sm text-neo-muted max-w-md">
+          <p className="text-sm text-[#5A6474] max-w-md">
             Every square foot is engineered for meaningful memories, effortless relaxation, and vibrant community connection.
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function ClubExperience() {
             return (
               <div
                 key={idx}
-                className="group relative rounded-2xl overflow-hidden bg-[#10131A] border border-[#C98D78]/20 hover:border-[#C98D78]/60 transition-all duration-500 flex flex-col justify-between hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C98D78]/10"
+                className="group relative rounded-2xl overflow-hidden bg-white border border-[#A85D45]/20 hover:border-[#A85D45] transition-all duration-500 flex flex-col justify-between hover:-translate-y-2 hover:shadow-xl hover:shadow-[#A85D45]/10 shadow-sm"
               >
                 {/* Image Container */}
                 <div className="relative aspect-[4/3] w-full overflow-hidden">
@@ -78,23 +78,23 @@ export default function ClubExperience() {
                     fill
                     className="object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#10131A] via-transparent to-black/30" />
-                  <div className="absolute top-3 right-3 p-2 rounded-full bg-black/60 backdrop-blur-md text-[#C98D78] border border-white/10">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
+                  <div className="absolute top-3 right-3 p-2 rounded-full bg-white/90 backdrop-blur-md text-[#A85D45] border border-[#A85D45]/20 shadow-md">
                     <Icon className="w-3.5 h-3.5" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
+                <div className="p-5 flex-1 flex flex-col justify-between space-y-3 bg-white">
                   <div>
-                    <h3 className="text-lg font-serif text-white group-hover:text-neo-peach transition-colors">
+                    <h3 className="text-lg font-serif text-[#10141E] group-hover:text-[#A85D45] transition-colors font-medium">
                       {exp.title}
                     </h3>
-                    <p className="text-xs italic font-serif text-[#C98D78] mt-1">
+                    <p className="text-xs italic font-serif text-[#A85D45] mt-1 font-medium">
                       &ldquo;{exp.tagline}&rdquo;
                     </p>
                   </div>
-                  <p className="text-xs text-neo-muted leading-relaxed">
+                  <p className="text-xs text-[#5A6474] leading-relaxed">
                     {exp.desc}
                   </p>
                 </div>

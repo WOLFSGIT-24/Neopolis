@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { useNeoModal } from './context/NeoModalContext'
-import { Maximize2, Compass, Layers, Check, Download, Eye, Sparkles } from 'lucide-react'
+import { Maximize2, Compass, Check } from 'lucide-react'
 
 export default function ResidencesSection() {
   const [selectedTower, setSelectedTower] = useState<'Tower A' | 'Tower B'>('Tower A')
@@ -184,42 +184,42 @@ export default function ResidencesSection() {
   const currentPlan = currentList[selectedUnitIdx] || currentList[0]
 
   return (
-    <section id="residences" className="relative w-full py-28 sm:py-36 bg-[#0E121B] text-neo-ivory overflow-hidden border-t border-[#C98D78]/20">
+    <section id="residences" className="relative w-full py-28 sm:py-36 bg-[#FAF7F2] text-[#10141E] overflow-hidden border-t border-[#A85D45]/15">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* Section Title */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 sm:mb-16 gap-6 sm:gap-8">
           <div className="space-y-3 sm:space-y-4 max-w-3xl">
-            <span className="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-[#C98D78] font-medium block">
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-[#A85D45] font-semibold block">
               08 • Palatial Living
             </span>
-            <h2 className="text-3xl sm:text-5xl md:text-7xl font-serif font-light text-white leading-[1.05]">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
               RESIDENCES <br />
-              <span className="italic text-neo-peach font-normal">Homes designed to fit your life.</span>
+              <span className="italic text-[#A85D45] font-normal">Homes designed to fit your life.</span>
             </h2>
-            <p className="text-xs sm:text-sm text-neo-muted pt-1 sm:pt-2 leading-relaxed max-w-2xl">
+            <p className="text-xs sm:text-sm text-[#5A6474] pt-1 sm:pt-2 leading-relaxed max-w-2xl">
               Thoughtfully configured 3 & 4 BHK luxury residences characterized by soaring 3.3m floor-to-floor heights, zero wasted circulation, cross-ventilated living spaces, and expansive viewing decks.
             </p>
           </div>
 
-          {/* Quick Summary Badges - Responsive Grid */}
+          {/* Quick Summary Badges */}
           <div className="grid grid-cols-2 gap-2.5 sm:flex sm:items-center sm:gap-4 shrink-0">
-            <div className="p-3 sm:p-4 rounded-xl bg-[#141822] border border-[#C98D78]/30 text-center">
-              <span className="text-[10px] sm:text-xs font-mono uppercase text-[#C98D78] block">3 BHK Homes</span>
-              <span className="text-base sm:text-xl font-serif text-white font-normal">2,253 – 2,735+ sq.ft.</span>
+            <div className="p-3 sm:p-4 rounded-xl bg-white border border-[#A85D45]/25 text-center shadow-sm">
+              <span className="text-[10px] sm:text-xs font-mono uppercase text-[#A85D45] font-semibold block">3 BHK Homes</span>
+              <span className="text-base sm:text-xl font-serif text-[#10141E] font-medium">2,253 – 2,735+ sq.ft.</span>
             </div>
-            <div className="p-3 sm:p-4 rounded-xl bg-[#141822] border border-[#C98D78]/30 text-center">
-              <span className="text-[10px] sm:text-xs font-mono uppercase text-[#C98D78] block">4 BHK Homes</span>
-              <span className="text-base sm:text-xl font-serif text-white font-normal">3,220 – 4,505+ sq.ft.</span>
+            <div className="p-3 sm:p-4 rounded-xl bg-white border border-[#A85D45]/25 text-center shadow-sm">
+              <span className="text-[10px] sm:text-xs font-mono uppercase text-[#A85D45] font-semibold block">4 BHK Homes</span>
+              <span className="text-base sm:text-xl font-serif text-[#10141E] font-medium">3,220 – 4,505+ sq.ft.</span>
             </div>
           </div>
         </div>
 
         {/* Interactive Floor Plan Viewer Card */}
-        <div className="rounded-2xl sm:rounded-3xl bg-[#121620] border border-[#C98D78]/30 p-4 sm:p-8 lg:p-10 shadow-2xl space-y-6 sm:space-y-8">
+        <div className="rounded-2xl sm:rounded-3xl bg-white border border-[#A85D45]/20 p-4 sm:p-8 lg:p-10 shadow-xl space-y-6 sm:space-y-8">
           {/* Tower Switcher & Unit Tabs */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6 pb-4 sm:pb-6 border-b border-white/10">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6 pb-4 sm:pb-6 border-b border-[#A85D45]/15">
             {/* Tower Toggle Buttons */}
-            <div className="flex items-center gap-2 sm:gap-3 bg-[#0B0D14] p-1 sm:p-1.5 rounded-full border border-white/10 self-start">
+            <div className="flex items-center gap-2 sm:gap-3 bg-[#F3ECE2] p-1 sm:p-1.5 rounded-full border border-[#A85D45]/20 self-start">
               {(['Tower A', 'Tower B'] as const).map((tower) => (
                 <button
                   key={tower}
@@ -229,8 +229,8 @@ export default function ResidencesSection() {
                   }}
                   className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs uppercase tracking-[0.18em] font-semibold transition-all ${
                     selectedTower === tower
-                      ? 'bg-[#C98D78] text-[#10131A] shadow-md'
-                      : 'text-neo-muted hover:text-white'
+                      ? 'bg-[#A85D45] text-white shadow-md'
+                      : 'text-[#5A6474] hover:text-[#10141E]'
                   }`}
                 >
                   {tower}
@@ -246,8 +246,8 @@ export default function ResidencesSection() {
                   onClick={() => setSelectedUnitIdx(idx)}
                   className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-mono tracking-wider transition-all whitespace-nowrap border shrink-0 ${
                     selectedUnitIdx === idx
-                      ? 'bg-[#18243A] text-[#E8C5B8] border-[#C98D78] shadow-md font-bold'
-                      : 'bg-white/5 text-neo-muted border-white/5 hover:border-white/20 hover:text-white'
+                      ? 'bg-[#A85D45] text-white border-[#A85D45] shadow-md font-bold'
+                      : 'bg-[#F3ECE2] text-[#5A6474] border-transparent hover:border-[#A85D45]/40 hover:text-[#10141E]'
                   }`}
                 >
                   {plan.unit}
@@ -273,7 +273,7 @@ export default function ResidencesSection() {
                     image: currentPlan.image,
                   })
                 }
-                className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#0A0D12] border border-[#C98D78]/30 shadow-2xl p-4 flex items-center justify-center cursor-zoom-in group-hover:border-[#C98D78] transition-colors"
+                className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#FAF7F2] border border-[#A85D45]/25 shadow-inner p-4 flex items-center justify-center cursor-zoom-in group-hover:border-[#A85D45] transition-colors"
               >
                 <Image
                   src={currentPlan.image}
@@ -283,12 +283,12 @@ export default function ResidencesSection() {
                 />
 
                 {/* Hover overlay hint */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white text-xs font-mono uppercase tracking-widest backdrop-blur-sm">
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white text-xs font-mono uppercase tracking-widest backdrop-blur-xs">
                   <Maximize2 className="w-4 h-4 text-[#C98D78]" />
                   <span>Click to Zoom & View High-Res Plan</span>
                 </div>
 
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-md bg-black/70 backdrop-blur-md text-[11px] font-mono text-[#C98D78] border border-white/10">
+                <div className="absolute top-4 left-4 px-3 py-1 rounded-md bg-white/95 backdrop-blur-md text-[11px] font-mono text-[#A85D45] font-semibold border border-[#A85D45]/20 shadow-sm">
                   {selectedTower} • {currentPlan.unit}
                 </div>
               </div>
@@ -297,48 +297,48 @@ export default function ResidencesSection() {
             {/* Right Specs & Plan Information */}
             <div className="lg:col-span-5 space-y-6">
               <div>
-                <span className="text-xs uppercase tracking-[0.25em] text-[#C98D78] font-medium block mb-1">
+                <span className="text-xs uppercase tracking-[0.25em] text-[#A85D45] font-semibold block mb-1">
                   {selectedTower} Configuration
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-serif text-white font-normal">
+                <h3 className="text-2xl sm:text-3xl font-serif text-[#10141E] font-medium">
                   {currentPlan.title}
                 </h3>
-                <p className="text-sm font-serif italic text-neo-peach mt-1">
+                <p className="text-sm font-serif italic text-[#A85D45] mt-1 font-medium">
                   {currentPlan.type}
                 </p>
               </div>
 
               {/* Area Specification Grid */}
-              <div className="grid grid-cols-2 gap-3 p-4 rounded-xl bg-[#141822] border border-white/10">
+              <div className="grid grid-cols-2 gap-3 p-4 rounded-xl bg-[#FAF7F2] border border-[#A85D45]/15">
                 <div>
-                  <span className="text-[10px] uppercase text-neo-muted block font-mono">Super Built-up Area</span>
-                  <span className="text-lg font-serif text-white font-normal">{currentPlan.sba}</span>
+                  <span className="text-[10px] uppercase text-[#5A6474] block font-mono">Super Built-up Area</span>
+                  <span className="text-lg font-serif text-[#10141E] font-medium">{currentPlan.sba}</span>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase text-neo-muted block font-mono">RERA Carpet Area</span>
-                  <span className="text-lg font-serif text-white font-normal">{currentPlan.carpet}</span>
+                  <span className="text-[10px] uppercase text-[#5A6474] block font-mono">RERA Carpet Area</span>
+                  <span className="text-lg font-serif text-[#10141E] font-medium">{currentPlan.carpet}</span>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase text-neo-muted block font-mono">Unit Facing</span>
-                  <span className="text-sm font-serif text-[#E8C5B8] flex items-center gap-1 mt-0.5">
-                    <Compass className="w-3.5 h-3.5 text-[#C98D78]" />
+                  <span className="text-[10px] uppercase text-[#5A6474] block font-mono">Unit Facing</span>
+                  <span className="text-sm font-serif text-[#10141E] font-medium flex items-center gap-1 mt-0.5">
+                    <Compass className="w-3.5 h-3.5 text-[#A85D45]" />
                     {currentPlan.facing}
                   </span>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase text-neo-muted block font-mono">Balcony / Deck</span>
-                  <span className="text-sm font-serif text-neo-ivory mt-0.5">{currentPlan.balcony}</span>
+                  <span className="text-[10px] uppercase text-[#5A6474] block font-mono">Balcony / Deck</span>
+                  <span className="text-sm font-serif text-[#10141E] font-medium mt-0.5">{currentPlan.balcony}</span>
                 </div>
               </div>
 
               {/* Layout Inclusions */}
               <div className="space-y-2 pt-1">
-                <span className="text-xs uppercase tracking-wider text-[#C98D78] font-medium block">
+                <span className="text-xs uppercase tracking-wider text-[#A85D45] font-semibold block">
                   Layout Highlights
                 </span>
                 {currentPlan.highlights.map((h, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-xs text-neo-muted">
-                    <Check className="w-3.5 h-3.5 text-[#C98D78] shrink-0" />
+                  <div key={idx} className="flex items-center gap-2 text-xs text-[#5A6474]">
+                    <Check className="w-3.5 h-3.5 text-[#A85D45] shrink-0 font-bold" />
                     <span>{h}</span>
                   </div>
                 ))}
@@ -359,14 +359,14 @@ export default function ResidencesSection() {
                       image: currentPlan.image,
                     })
                   }
-                  className="flex-1 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10 text-xs uppercase tracking-[0.18em] font-medium flex items-center justify-center gap-2 transition-colors"
+                  className="flex-1 py-3 rounded-xl bg-white hover:bg-[#F5EBE6] text-[#10141E] border border-[#A85D45]/30 text-xs uppercase tracking-[0.18em] font-semibold flex items-center justify-center gap-2 transition-colors shadow-sm"
                 >
-                  <Maximize2 className="w-3.5 h-3.5 text-[#C98D78]" />
+                  <Maximize2 className="w-3.5 h-3.5 text-[#A85D45]" />
                   Enlarge Plan
                 </button>
                 <button
                   onClick={() => openEnquiry(`Floor Plan Enquiry for ${selectedTower} - ${currentPlan.unit}`)}
-                  className="flex-1 py-3 rounded-xl bg-[#C98D78] text-[#10131A] text-xs uppercase tracking-[0.18em] font-semibold hover:bg-[#E8C5B8] transition-colors"
+                  className="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#C98D78] via-[#B8735C] to-[#A85D45] text-white text-xs uppercase tracking-[0.18em] font-semibold hover:opacity-95 transition-colors shadow-md"
                 >
                   Request Pricing
                 </button>

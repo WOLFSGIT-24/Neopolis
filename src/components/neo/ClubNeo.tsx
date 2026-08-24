@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { Sparkles, Layers, ArrowUpRight } from 'lucide-react'
+import { Layers, ArrowUpRight } from 'lucide-react'
 
 export default function ClubNeo() {
   const [activeFloor, setActiveFloor] = useState('GROUND')
@@ -108,22 +108,21 @@ export default function ClubNeo() {
   const current = floors.find((f) => f.id === activeFloor) || floors[0]
 
   return (
-    <section id="club-neo" className="relative w-full py-28 sm:py-36 bg-[#0E121B] text-neo-ivory overflow-hidden border-y border-[#C98D78]/25">
-      {/* Ambient background glow in copper */}
-      <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-[#C98D78]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-[#18243A]/50 rounded-full blur-3xl pointer-events-none" />
+    <section id="club-neo" className="relative w-full py-28 sm:py-36 bg-[#FAF7F2] text-[#10141E] overflow-hidden border-y border-[#A85D45]/15">
+      {/* Ambient background glow */}
+      <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-[#A85D45]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Header Title */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
-          <span className="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-[#C98D78] font-medium block">
+          <span className="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-[#A85D45] font-semibold block">
             04 • The Crown Jewel
           </span>
-          <h2 className="text-3xl sm:text-5xl md:text-7xl font-serif font-light text-white leading-[1.05]">
+          <h2 className="text-3xl sm:text-5xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
             CLUB NEO <br />
-            <span className="italic text-neo-peach font-normal">Suspended between sky & water.</span>
+            <span className="italic text-[#A85D45] font-normal">Suspended between sky & water.</span>
           </h2>
-          <p className="text-xs sm:text-sm text-neo-muted max-w-xl mx-auto pt-1 sm:pt-2">
+          <p className="text-xs sm:text-sm text-[#5A6474] max-w-xl mx-auto pt-1 sm:pt-2">
             A landmark of leisure designed for experiences that go beyond the everyday. Spanning multiple dedicated levels of unprecedented luxury.
           </p>
         </div>
@@ -132,7 +131,7 @@ export default function ClubNeo() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Vertical Floor Selector Navigation */}
           <div className="lg:col-span-4 space-y-2 order-2 lg:order-1">
-            <div className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#C98D78] font-medium mb-2.5 flex items-center gap-2">
+            <div className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#A85D45] font-semibold mb-2.5 flex items-center gap-2">
               <Layers className="w-3.5 h-3.5" />
               <span>Select Club Level</span>
             </div>
@@ -144,23 +143,23 @@ export default function ClubNeo() {
                   <button
                     key={floor.id}
                     onClick={() => setActiveFloor(floor.id)}
-                    className={`p-2 sm:p-3.5 rounded-xl text-left transition-all duration-300 flex items-center justify-between border ${
+                    className={`p-2 sm:p-3.5 rounded-xl text-left transition-all duration-300 flex items-center justify-between border shadow-sm ${
                       isActive
-                        ? 'bg-gradient-to-r from-[#18243A] to-[#121620] border-[#C98D78] shadow-md shadow-[#C98D78]/15'
-                        : 'bg-[#141822]/60 border-white/5 hover:border-white/20 text-neo-muted hover:text-white'
+                        ? 'bg-white border-[#A85D45] shadow-md ring-1 ring-[#A85D45]'
+                        : 'bg-white/80 border-[#A85D45]/15 hover:border-[#A85D45]/50 text-[#5A6474] hover:text-[#10141E]'
                     }`}
                   >
                     <div>
                       <span
                         className={`text-[10px] sm:text-xs font-mono block ${
-                          isActive ? 'text-[#C98D78] font-bold' : 'text-white/60'
+                          isActive ? 'text-[#A85D45] font-bold' : 'text-[#8C97A7]'
                         }`}
                       >
                         {floor.id}
                       </span>
                       <h4
                         className={`text-xs sm:text-sm font-serif truncate ${
-                          isActive ? 'text-white font-medium' : 'text-neo-muted'
+                          isActive ? 'text-[#10141E] font-semibold' : 'text-[#5A6474]'
                         }`}
                       >
                         {floor.name}
@@ -169,7 +168,7 @@ export default function ClubNeo() {
 
                     <ArrowUpRight
                       className={`w-3.5 h-3.5 transition-transform hidden lg:block ${
-                        isActive ? 'text-[#C98D78] rotate-45' : 'text-white/20'
+                        isActive ? 'text-[#A85D45] rotate-45' : 'text-[#8C97A7]'
                       }`}
                     />
                   </button>
@@ -180,23 +179,23 @@ export default function ClubNeo() {
 
           {/* Floor Render & Facilities Preview */}
           <div className="lg:col-span-8 space-y-4 sm:space-y-6 order-1 lg:order-2">
-            <div className="relative aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden border border-[#C98D78]/30 shadow-2xl bg-[#10131A] group">
+            <div className="relative aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden border border-[#A85D45]/25 shadow-xl bg-white group">
               <Image
                 src={current.image}
                 alt={current.name}
                 fill
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
               {/* Tag on top */}
-              <div className="absolute top-3.5 right-3.5 sm:top-5 sm:right-5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] sm:text-xs text-[#E8C5B8] font-mono">
+              <div className="absolute top-3.5 right-3.5 sm:top-5 sm:right-5 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#A85D45]/20 text-[10px] sm:text-xs text-[#A85D45] font-mono font-semibold shadow-md">
                 Level: {current.id}
               </div>
 
               {/* Bottom text inside frame */}
               <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 space-y-0.5 sm:space-y-1">
-                <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-[#C98D78] font-mono">
+                <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-[#E8C5B8] font-mono font-semibold">
                   {current.name} Experience
                 </span>
                 <h3 className="text-lg sm:text-2xl md:text-3xl font-serif text-white">
@@ -206,14 +205,14 @@ export default function ClubNeo() {
             </div>
 
             {/* Floor Facilities Grid */}
-            <div className="p-4 sm:p-6 lg:p-8 rounded-2xl bg-[#141822]/90 border border-white/10 backdrop-blur-md">
-              <h4 className="text-[11px] sm:text-xs uppercase tracking-[0.2em] text-[#C98D78] font-medium mb-3">
+            <div className="p-4 sm:p-6 lg:p-8 rounded-2xl bg-white border border-[#A85D45]/20 shadow-md">
+              <h4 className="text-[11px] sm:text-xs uppercase tracking-[0.2em] text-[#A85D45] font-semibold mb-3">
                 Level Inclusions & Amenities
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3.5">
                 {current.facilities.map((fac, idx) => (
-                  <div key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-neo-ivory/90">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#C98D78] shrink-0 mt-1.5" />
+                  <div key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-[#10141E]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#A85D45] shrink-0 mt-1.5" />
                     <span>{fac}</span>
                   </div>
                 ))}

@@ -6,7 +6,7 @@
        url("https://use.typekit.net/af/0a465a/0000000000000000775fd6c7/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff");
   font-display: swap;
   font-style: normal;
-  font-weight: 200;
+  weight: 200;
 }
 
 @font-face {
@@ -15,7 +15,7 @@
        url("https://use.typekit.net/af/1ce8de/0000000000000000775fd6c5/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("woff");
   font-display: swap;
   font-style: normal;
-  font-weight: 100;
+  weight: 100;
 }
 
 @font-face {
@@ -24,7 +24,7 @@
        url("https://use.typekit.net/af/d9af7e/0000000000000000775fd6cb/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff");
   font-display: swap;
   font-style: normal;
-  font-weight: 400;
+  weight: 400;
 }
 
 @tailwind base;
@@ -33,25 +33,28 @@
 
 @layer base {
   :root {
-    --bg-dark: #10131A;
-    --bg-midnight: #18243A;
-    --bg-teal: #10323C;
-    --copper: #C98D78;
-    --copper-light: #E8C5B8;
-    --ivory: #F5F0EA;
-    --muted: #B9B1AA;
+    --bg-page: #FAF7F2;
+    --bg-alt: #F3ECE2;
+    --bg-card: #FFFFFF;
+    --text-charcoal: #10141E;
+    --text-body: #4A5568;
+    --text-muted: #6B7280;
+    --copper: #A85D45;
+    --copper-bright: #C98D78;
+    --copper-light: #F5EBE6;
+    --border-color: rgba(168, 93, 69, 0.2);
   }
 
   html {
     scroll-behavior: smooth;
-    background-color: #10131A;
-    color: #F5F0EA;
+    background-color: #FAF7F2;
+    color: #10141E;
     font-family: "parabolica", sans-serif;
   }
 
   body {
-    background-color: #10131A;
-    color: #F5F0EA;
+    background-color: #FAF7F2;
+    color: #10141E;
     overflow-x: hidden;
     font-family: "parabolica", sans-serif;
   }
@@ -61,8 +64,8 @@
   }
 
   ::selection {
-    background: #C98D78;
-    color: #10131A;
+    background: #A85D45;
+    color: #FFFFFF;
   }
 
   /* Custom luxury scrollbar */
@@ -71,65 +74,65 @@
     height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #10131A;
+    background: #FAF7F2;
   }
   ::-webkit-scrollbar-thumb {
-    background: #2A364F;
+    background: #D9CEC1;
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #C98D78;
+    background: #A85D45;
   }
 }
 
 @layer utilities {
   .text-copper {
-    color: #C98D78;
+    color: #A85D45;
   }
   .bg-copper {
-    background-color: #C98D78;
+    background-color: #A85D45;
   }
   .border-copper {
-    border-color: #C98D78;
+    border-color: #A85D45;
   }
 
   .copper-gradient-text {
-    background: linear-gradient(135deg, #FFFFFF 20%, #E8C5B8 60%, #C98D78 100%);
+    background: linear-gradient(135deg, #10141E 20%, #A85D45 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .copper-shine {
-    background: linear-gradient(135deg, #E8C5B8 0%, #C98D78 50%, #A86D58 100%);
+    background: linear-gradient(135deg, #A85D45 0%, #C98D78 50%, #84422F 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .glass-card {
-    background: rgba(16, 19, 26, 0.75);
+    background: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(201, 141, 120, 0.18);
+    border: 1px solid rgba(168, 93, 69, 0.18);
   }
 
   .glass-card-hover {
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .glass-card-hover:hover {
-    border-color: rgba(201, 141, 120, 0.45);
-    background: rgba(24, 36, 58, 0.85);
+    border-color: rgba(168, 93, 69, 0.45);
+    background: #FFFFFF;
     transform: translateY(-3px);
   }
 
   .glass-card-light {
-    background: rgba(24, 36, 58, 0.45);
+    background: rgba(243, 236, 226, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(168, 93, 69, 0.12);
   }
 
   .editorial-border {
-    border-color: rgba(201, 141, 120, 0.2);
+    border-color: rgba(168, 93, 69, 0.18);
   }
 
   .hide-scrollbar {

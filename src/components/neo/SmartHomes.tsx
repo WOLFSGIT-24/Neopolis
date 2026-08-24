@@ -8,7 +8,6 @@ import {
   SunMedium,
   Cpu,
   Wifi,
-  Sparkles,
   ToggleRight,
   ShieldCheck,
   ChevronLeft,
@@ -75,36 +74,27 @@ export default function SmartHomes() {
   }
 
   return (
-    <section className="relative w-full py-24 sm:py-32 bg-[#0E121A] text-neo-ivory overflow-hidden border-t border-white/5">
-      {/* Subtle circuit line aesthetic */}
-      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-        <div className="max-w-[1600px] h-full mx-auto border-x border-[#C98D78]/20 flex justify-around">
-          <div className="w-[1px] h-full bg-[#C98D78]/20" />
-          <div className="w-[1px] h-full bg-[#C98D78]/20" />
-          <div className="w-[1px] h-full bg-[#C98D78]/20" />
-        </div>
-      </div>
-
+    <section id="smart-homes" className="relative w-full py-24 sm:py-32 bg-[#FAF7F2] text-[#10141E] overflow-hidden border-t border-[#A85D45]/15">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Header with Navigation Arrows */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-8">
           <div className="space-y-3 max-w-2xl">
-            <span className="text-xs uppercase tracking-[0.35em] text-[#C98D78] font-medium block">
+            <span className="text-xs uppercase tracking-[0.35em] text-[#A85D45] font-semibold block">
               05 • Intelligent Automation
             </span>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-serif font-light text-white leading-[1.05]">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-serif font-light text-[#10141E] leading-[1.05]">
               Your world. <br />
-              <span className="italic text-neo-peach font-normal">At your fingertips.</span>
+              <span className="italic text-[#A85D45] font-normal">At your fingertips.</span>
             </h2>
-            <p className="text-xs sm:text-sm text-neo-muted pt-2 leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#5A6474] pt-2 leading-relaxed">
               Every residence at Neo Towers is engineered as a cognitive living environment. Seamlessly orchestrate comfort, security, and climate with whisper-quiet sophistication.
             </p>
           </div>
 
           {/* Carousel Controls */}
           <div className="flex items-center gap-4 self-start lg:self-end">
-            <div className="flex items-center gap-2 text-xs text-[#E8C5B8] font-mono mr-2 hidden sm:flex">
-              <ShieldCheck className="w-4 h-4 text-[#C98D78]" />
+            <div className="flex items-center gap-2 text-xs text-[#A85D45] font-mono mr-2 hidden sm:flex font-semibold">
+              <ShieldCheck className="w-4 h-4 text-[#A85D45]" />
               <span>Full IoT Standard</span>
             </div>
 
@@ -112,14 +102,14 @@ export default function SmartHomes() {
               <button
                 onClick={() => scroll('left')}
                 aria-label="Previous smart feature"
-                className="p-3 rounded-full bg-[#18243A] hover:bg-[#C98D78] hover:text-[#10131A] text-white border border-white/10 transition-colors shadow-md"
+                className="p-3 rounded-full bg-white hover:bg-[#A85D45] hover:text-white text-[#10141E] border border-[#A85D45]/20 transition-colors shadow-sm"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={() => scroll('right')}
                 aria-label="Next smart feature"
-                className="p-3 rounded-full bg-[#18243A] hover:bg-[#C98D78] hover:text-[#10131A] text-white border border-white/10 transition-colors shadow-md"
+                className="p-3 rounded-full bg-white hover:bg-[#A85D45] hover:text-white text-[#10141E] border border-[#A85D45]/20 transition-colors shadow-sm"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -139,10 +129,10 @@ export default function SmartHomes() {
               <div
                 key={idx}
                 onMouseEnter={() => setActiveFeature(idx)}
-                className={`w-[290px] sm:w-[330px] md:w-[350px] shrink-0 p-6 rounded-2xl transition-all duration-300 border flex flex-col justify-between snap-start ${
+                className={`w-[290px] sm:w-[330px] md:w-[350px] shrink-0 p-6 rounded-2xl transition-all duration-300 border flex flex-col justify-between snap-start shadow-sm ${
                   isHovered
-                    ? 'bg-[#151C28] border-[#C98D78]/70 shadow-xl shadow-[#C98D78]/10'
-                    : 'bg-[#121620]/85 border-white/10 hover:border-[#C98D78]/40'
+                    ? 'bg-white border-[#A85D45] shadow-xl shadow-[#A85D45]/10'
+                    : 'bg-white/90 border-[#A85D45]/15 hover:border-[#A85D45]/40'
                 }`}
               >
                 <div>
@@ -150,28 +140,28 @@ export default function SmartHomes() {
                     <div
                       className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
                         isHovered
-                          ? 'bg-[#C98D78] text-[#10131A]'
-                          : 'bg-white/5 text-[#C98D78]'
+                          ? 'bg-[#A85D45] text-white'
+                          : 'bg-[#F5EBE6] text-[#A85D45]'
                       }`}
                     >
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[10px] font-mono text-neo-peach/80 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">
+                    <span className="text-[10px] font-mono text-[#A85D45] px-2.5 py-0.5 rounded-full bg-[#F5EBE6] border border-[#A85D45]/20 font-semibold">
                       {feat.status}
                     </span>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-serif text-white font-normal mb-2">
+                  <h3 className="text-lg sm:text-xl font-serif text-[#10141E] font-medium mb-2">
                     {feat.title}
                   </h3>
-                  <p className="text-xs text-neo-muted leading-relaxed">
+                  <p className="text-xs text-[#5A6474] leading-relaxed">
                     {feat.desc}
                   </p>
                 </div>
 
-                <div className="pt-4 mt-6 border-t border-white/5 flex items-center justify-between text-[11px] text-[#C98D78]">
+                <div className="pt-4 mt-6 border-t border-black/5 flex items-center justify-between text-[11px] text-[#A85D45] font-semibold">
                   <span>Active Module</span>
-                  <ToggleRight className="w-4 h-4 text-[#C98D78]" />
+                  <ToggleRight className="w-4 h-4 text-[#A85D45]" />
                 </div>
               </div>
             )
@@ -194,7 +184,7 @@ export default function SmartHomes() {
               }}
               aria-label={`Go to slide ${idx + 1}`}
               className={`h-1 rounded-full transition-all duration-300 ${
-                activeFeature === idx ? 'w-8 bg-[#C98D78]' : 'w-2 bg-white/20 hover:bg-white/40'
+                activeFeature === idx ? 'w-8 bg-[#A85D45]' : 'w-2 bg-[#D9CEC1] hover:bg-[#A85D45]/50'
               }`}
             />
           ))}

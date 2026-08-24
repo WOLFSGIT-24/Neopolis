@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { useNeoModal } from './context/NeoModalContext'
-import { Download, FileText, ArrowRight, ShieldCheck, Sparkles } from 'lucide-react'
+import { Download, FileText } from 'lucide-react'
 
 export default function PriceSection() {
   const { openEnquiry, openTerms, openBrochure } = useNeoModal()
@@ -34,23 +34,20 @@ export default function PriceSection() {
   ]
 
   return (
-    <section id="price" className="relative w-full py-20 sm:py-24 bg-[#10131A] text-neo-ivory overflow-hidden border-t border-[#C98D78]/20">
-      {/* Subtle ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#18243A]/40 rounded-full blur-[140px] pointer-events-none" />
-
+    <section id="price" className="relative w-full py-20 sm:py-24 bg-[#F3ECE2] text-[#10141E] overflow-hidden border-t border-[#A85D45]/15">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Simple & Elegant Header */}
         <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-          <span className="text-xs uppercase tracking-[0.3em] text-[#C98D78] font-medium block">
+          <span className="text-xs uppercase tracking-[0.3em] text-[#A85D45] font-semibold block">
             Payment Plan
           </span>
-          <h2 className="text-3xl sm:text-5xl font-serif font-light text-white leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-serif font-light text-[#10141E] leading-tight">
             Simple, milestone-based <br />
-            <span className="italic text-neo-peach font-normal">payment.</span>
+            <span className="italic text-[#A85D45] font-normal">payment.</span>
           </h2>
-          <div className="pt-2 inline-flex items-center gap-2 px-5 py-1.5 rounded-full bg-[#18243A] border border-[#C98D78]/30 text-xs font-mono text-[#E8C5B8]">
+          <div className="pt-2 inline-flex items-center gap-2 px-5 py-1.5 rounded-full bg-white border border-[#A85D45]/30 text-xs font-mono text-[#A85D45] shadow-sm">
             <span>Base Price:</span>
-            <span className="text-white font-bold">₹10,900</span>
+            <span className="text-[#10141E] font-bold">₹10,900</span>
             <span>/ sq. ft.</span>
           </div>
         </div>
@@ -60,28 +57,28 @@ export default function PriceSection() {
           {paymentSteps.map((item, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl bg-[#141822] border border-[#C98D78]/25 hover:border-[#C98D78]/60 transition-all duration-300 flex flex-col justify-between space-y-4 hover:shadow-xl hover:shadow-[#C98D78]/10 group"
+              className="p-6 rounded-2xl bg-white border border-[#A85D45]/20 hover:border-[#A85D45]/60 transition-all duration-300 flex flex-col justify-between space-y-4 shadow-sm hover:shadow-xl hover:shadow-[#A85D45]/10 group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-mono text-[#C98D78]">
+                  <span className="text-xs font-mono text-[#A85D45] font-semibold">
                     Phase {item.step}
                   </span>
-                  <span className="text-2xl sm:text-3xl font-serif font-bold text-white group-hover:text-[#E8C5B8] transition-colors">
+                  <span className="text-2xl sm:text-3xl font-serif font-bold text-[#10141E] group-hover:text-[#A85D45] transition-colors">
                     {item.percentage}
                   </span>
                 </div>
 
-                <h3 className="text-base font-serif text-white font-medium mb-1.5">
+                <h3 className="text-base font-serif text-[#10141E] font-medium mb-1.5">
                   {item.title}
                 </h3>
-                <p className="text-xs text-neo-muted leading-relaxed">
+                <p className="text-xs text-[#5A6474] leading-relaxed">
                   {item.desc}
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-white/5 flex items-center gap-1 text-[10px] font-mono text-[#C98D78]/80">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C98D78]" />
+              <div className="pt-3 border-t border-black/5 flex items-center gap-1.5 text-[10px] font-mono text-[#A85D45] font-semibold">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#A85D45]" />
                 <span>Construction Linked</span>
               </div>
             </div>
@@ -89,12 +86,12 @@ export default function PriceSection() {
         </div>
 
         {/* Clean Luxury Action Strip */}
-        <div className="p-6 sm:p-7 rounded-2xl bg-[#121620] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="p-6 sm:p-7 rounded-2xl bg-white border border-[#A85D45]/20 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
           <div className="space-y-1 text-center sm:text-left">
-            <h4 className="text-sm font-serif text-white font-medium">
+            <h4 className="text-sm font-serif text-[#10141E] font-semibold">
               Looking for full pricing breakdown & unit plans?
             </h4>
-            <p className="text-xs text-neo-muted">
+            <p className="text-xs text-[#5A6474]">
               Download the official price docket or view statutory purchase terms.
             </p>
           </div>
@@ -102,15 +99,15 @@ export default function PriceSection() {
           <div className="flex items-center gap-3 flex-wrap justify-center">
             <button
               onClick={openTerms}
-              className="px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs text-neo-peach border border-white/10 transition-colors flex items-center gap-1.5 font-medium"
+              className="px-4 py-2.5 rounded-xl bg-[#FAF7F2] hover:bg-[#F5EBE6] text-xs text-[#A85D45] border border-[#A85D45]/20 transition-colors flex items-center gap-1.5 font-semibold"
             >
-              <FileText className="w-3.5 h-3.5 text-[#C98D78]" />
+              <FileText className="w-3.5 h-3.5 text-[#A85D45]" />
               Pricing Terms & Taxes
             </button>
 
             <button
               onClick={openBrochure}
-              className="px-5 py-2.5 rounded-xl bg-white/5 hover:bg-[#C98D78] hover:text-[#10131A] text-xs uppercase tracking-wider text-neo-peach border border-[#C98D78]/30 transition-all flex items-center gap-1.5 font-medium"
+              className="px-5 py-2.5 rounded-xl bg-white hover:bg-[#A85D45] hover:text-white text-xs uppercase tracking-wider text-[#A85D45] border border-[#A85D45]/30 transition-all flex items-center gap-1.5 font-semibold"
             >
               <Download className="w-3.5 h-3.5" />
               Download Price Sheet
@@ -118,7 +115,7 @@ export default function PriceSection() {
 
             <button
               onClick={() => openEnquiry('Price Section Consultation')}
-              className="px-6 py-2.5 rounded-xl bg-[#C98D78] text-[#10131A] text-xs uppercase tracking-wider font-semibold hover:bg-[#E8C5B8] transition-colors"
+              className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#C98D78] via-[#B8735C] to-[#A85D45] text-white text-xs uppercase tracking-wider font-semibold hover:opacity-95 transition-colors shadow-md"
             >
               Enquire Pricing
             </button>

@@ -30,7 +30,7 @@ import FloatingWhatsApp from '../neo/FloatingWhatsApp'
 export default function NeoHomePage() {
   return (
     <NeoModalProvider>
-      <div className="w-full min-h-screen bg-[#10131A] text-neo-ivory selection:bg-[#C98D78] selection:text-[#10131A] relative">
+      <div className="w-full min-h-screen bg-[#FAF7F2] text-[#10141E] selection:bg-[#A85D45] selection:text-white relative">
         {/* Section 1: Top Navigation */}
         <Navbar />
 

@@ -23,7 +23,7 @@ export default function StatisticsSection() {
   ]
 
   return (
-    <section className="relative w-full py-20 sm:py-28 bg-[#0B0E14] text-neo-ivory overflow-hidden border-y border-[#C98D78]/20">
+    <section className="relative w-full py-20 sm:py-28 bg-[#FAF7F2] text-[#10141E] overflow-hidden border-y border-[#A85D45]/15">
       {/* Background Architectural Watermark Render */}
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none flex items-center justify-center">
         <Image
@@ -31,21 +31,20 @@ export default function StatisticsSection() {
           alt="Neo Towers Blueprint"
           width={1200}
           height={1400}
-          className="object-contain max-h-[120%] w-auto"
+          className="object-contain max-h-[120%] w-auto invert brightness-0 opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B0E14] via-transparent to-[#0B0E14]" />
       </div>
 
       <div className="max-w-[1500px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Section Title */}
         <div className="text-center max-w-2xl mx-auto mb-14 space-y-2.5">
-          <span className="text-xs uppercase tracking-[0.3em] text-[#C98D78] font-medium block">
+          <span className="text-xs uppercase tracking-[0.3em] text-[#A85D45] font-semibold block">
             Project Overview by the Numbers
           </span>
-          <h2 className="text-3xl sm:text-5xl font-serif font-light text-white leading-tight">
-            Monumental <span className="italic text-neo-peach font-normal">Scale.</span>
+          <h2 className="text-3xl sm:text-5xl font-serif font-light text-[#10141E] leading-tight">
+            Monumental <span className="italic text-[#A85D45] font-normal">Scale.</span>
           </h2>
-          <p className="text-xs sm:text-sm text-neo-muted max-w-lg mx-auto">
+          <p className="text-xs sm:text-sm text-[#5A6474] max-w-lg mx-auto">
             Engineered with uncompromising precision to create Hyderabad&apos;s most prestigious residential benchmark.
           </p>
         </div>
@@ -55,17 +54,17 @@ export default function StatisticsSection() {
           {majorStats.map((item, idx) => (
             <div
               key={idx}
-              className="p-5 sm:p-6 rounded-2xl bg-[#121722]/85 border border-[#C98D78]/20 hover:border-[#C98D78]/60 transition-all duration-300 flex flex-col justify-between group hover:shadow-xl hover:shadow-[#C98D78]/10"
+              className="p-5 sm:p-6 rounded-2xl bg-white border border-[#A85D45]/20 hover:border-[#A85D45]/60 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-lg hover:shadow-[#A85D45]/10"
             >
               <div>
-                <span className="text-2xl sm:text-3xl lg:text-4xl font-serif font-normal text-white group-hover:text-neo-peach transition-colors block tracking-tight leading-none">
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-serif font-normal text-[#10141E] group-hover:text-[#A85D45] transition-colors block tracking-tight leading-none">
                   {item.value}
                 </span>
-                <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#C98D78] font-semibold block mt-2 font-mono">
+                <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#A85D45] font-semibold block mt-2 font-mono">
                   {item.unit}
                 </span>
               </div>
-              <p className="text-[11px] text-neo-muted mt-4 pt-3 border-t border-white/5 line-clamp-2">
+              <p className="text-[11px] text-[#5A6474] mt-4 pt-3 border-t border-black/5 line-clamp-2">
                 {item.label}
               </p>
             </div>
@@ -73,21 +72,21 @@ export default function StatisticsSection() {
         </div>
 
         {/* Project Highlights Breakdown List */}
-        <div className="rounded-2xl p-6 sm:p-8 bg-[#151C28]/85 border border-white/10 backdrop-blur-xl">
+        <div className="rounded-2xl p-6 sm:p-8 bg-[#F3ECE2] border border-[#A85D45]/20 shadow-sm">
           <div className="flex items-center gap-2 mb-6">
-            <Sparkles className="w-4 h-4 text-[#C98D78]" />
-            <h3 className="text-xs uppercase tracking-[0.25em] text-white font-medium">
+            <Sparkles className="w-4 h-4 text-[#A85D45]" />
+            <h3 className="text-xs uppercase tracking-[0.25em] text-[#10141E] font-semibold">
               Architectural Highlights & Engineering Excellence
             </h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {highlights.map((h, idx) => (
-              <div key={idx} className="space-y-1 border-l-2 border-[#C98D78] pl-3.5">
-                <h4 className="text-sm sm:text-base font-serif text-white font-normal">
+              <div key={idx} className="space-y-1 border-l-2 border-[#A85D45] pl-3.5">
+                <h4 className="text-sm sm:text-base font-serif text-[#10141E] font-medium">
                   {h.title}
                 </h4>
-                <p className="text-xs text-neo-muted leading-relaxed">
+                <p className="text-xs text-[#5A6474] leading-relaxed">
                   {h.desc}
                 </p>
               </div>

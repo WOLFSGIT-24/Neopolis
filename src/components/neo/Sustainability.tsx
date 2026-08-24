@@ -65,45 +65,42 @@ export default function Sustainability() {
   ]
 
   return (
-    <section className="relative w-full py-28 sm:py-36 bg-[#0B0F17] text-neo-ivory overflow-hidden border-t border-white/5">
-      {/* Background Subtle Green-Midnight Atmospheric Glow */}
-      <div className="absolute top-1/2 right-10 w-[600px] h-[600px] bg-emerald-950/20 rounded-full blur-[140px] pointer-events-none" />
-
+    <section id="sustainability" className="relative w-full py-28 sm:py-36 bg-[#F3ECE2] text-[#10141E] overflow-hidden border-t border-[#A85D45]/15">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Top Editorial Row with IGBC Seal */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
           <div className="space-y-4 max-w-3xl">
-            <span className="text-xs uppercase tracking-[0.35em] text-[#C98D78] font-medium block">
+            <span className="text-xs uppercase tracking-[0.35em] text-[#A85D45] font-semibold block">
               06 • Conscious Architecture
             </span>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif font-light text-white leading-[1.05]">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
               Engineered <br />
-              <span className="italic text-neo-peach font-normal">with the environment in mind.</span>
+              <span className="italic text-[#A85D45] font-normal">with the environment in mind.</span>
             </h2>
-            <p className="text-sm sm:text-base text-neo-muted pt-2 leading-relaxed max-w-2xl">
+            <p className="text-sm sm:text-base text-[#5A6474] pt-2 leading-relaxed max-w-2xl">
               Sustainable luxury is not a compromise — it is an elevation of living standards. Neo Towers integrates state-of-the-art ecological intelligence from ground podium to the highest crown.
             </p>
           </div>
 
           {/* IGBC Seal Card */}
-          <div className="flex items-center gap-4 p-5 rounded-2xl bg-[#121824] border border-[#C98D78]/30 shrink-0">
-            <div className="w-14 h-14 relative flex items-center justify-center p-2 rounded-xl bg-white/5">
+          <div className="flex items-center gap-4 p-5 rounded-2xl bg-white border border-[#A85D45]/25 shrink-0 shadow-md">
+            <div className="w-14 h-14 relative flex items-center justify-center p-2 rounded-xl bg-[#F5EBE6]">
               <Image
                 src="/neo-assets/lifeatneo/igbc-logo.svg"
                 alt="IGBC Pre-Certified"
                 width={48}
                 height={48}
-                className="object-contain brightness-110"
+                className="object-contain"
               />
             </div>
             <div>
-              <span className="text-[10px] uppercase tracking-widest text-[#C98D78] font-mono block">
+              <span className="text-[10px] uppercase tracking-widest text-[#A85D45] font-mono block font-semibold">
                 Green Building Council
               </span>
-              <h4 className="text-base font-serif text-white font-normal">
+              <h4 className="text-base font-serif text-[#10141E] font-medium">
                 IGBC Pre-Certified
               </h4>
-              <p className="text-[11px] text-neo-muted">
+              <p className="text-[11px] text-[#5A6474]">
                 Gold/Platinum Standard Ratings
               </p>
             </div>
@@ -117,28 +114,28 @@ export default function Sustainability() {
             return (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-[#121722]/70 border border-white/5 hover:border-[#C98D78]/40 transition-all duration-300 flex flex-col justify-between group hover:shadow-xl hover:shadow-emerald-950/20"
+                className="p-6 rounded-2xl bg-white border border-[#A85D45]/15 hover:border-[#A85D45]/60 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-lg"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-[#C98D78]/20 flex items-center justify-center text-[#C98D78] transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-[#F5EBE6] group-hover:bg-[#A85D45] group-hover:text-white flex items-center justify-center text-[#A85D45] transition-colors">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[10px] font-mono text-emerald-400/90 px-2 py-0.5 rounded-md bg-emerald-950/40 border border-emerald-800/30">
+                    <span className="text-[10px] font-mono text-emerald-700 font-semibold px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200">
                       {f.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-serif text-white font-normal mb-1.5 group-hover:text-neo-peach transition-colors">
+                  <h3 className="text-lg font-serif text-[#10141E] font-medium mb-1.5 group-hover:text-[#A85D45] transition-colors">
                     {f.title}
                   </h3>
-                  <p className="text-xs text-neo-muted leading-relaxed">
+                  <p className="text-xs text-[#5A6474] leading-relaxed">
                     {f.desc}
                   </p>
                 </div>
 
-                <div className="pt-4 mt-6 border-t border-white/5 flex items-center gap-1.5 text-[11px] text-[#C98D78]/80 font-mono">
-                  <span className="w-1 h-1 rounded-full bg-[#C98D78]" />
+                <div className="pt-4 mt-6 border-t border-black/5 flex items-center gap-1.5 text-[11px] text-[#A85D45] font-mono font-semibold">
+                  <span className="w-1 h-1 rounded-full bg-[#A85D45]" />
                   <span>Eco Standard</span>
                 </div>
               </div>

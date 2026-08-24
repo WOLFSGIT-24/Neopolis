@@ -10,19 +10,23 @@ const config: Config = {
     extend: {
       colors: {
         neo: {
-          charcoal: '#10131A',
+          bg: '#FAF7F2',
+          'bg-alt': '#F3ECE2',
+          'bg-card': '#FFFFFF',
+          charcoal: '#10141E',
           midnight: '#18243A',
-          teal: '#10323C',
-          dark: '#0B0D12',
-          copper: '#C98D78',
-          'copper-light': '#E8C5B8',
-          'copper-dark': '#A86D58',
-          peach: '#E8C5B8',
-          ivory: '#F5F0EA',
-          muted: '#B9B1AA',
-          border: 'rgba(201, 141, 120, 0.22)',
-          'border-light': 'rgba(255, 255, 255, 0.1)',
-          glass: 'rgba(16, 19, 26, 0.82)',
+          dark: '#10131A',
+          copper: '#A85D45',
+          'copper-bright': '#C98D78',
+          'copper-light': '#F5EBE6',
+          'copper-dark': '#84422F',
+          peach: '#C98D78',
+          ivory: '#FAF7F2',
+          muted: '#5A6474',
+          'muted-light': '#7E8A9C',
+          border: 'rgba(168, 93, 69, 0.22)',
+          'border-light': 'rgba(16, 20, 30, 0.08)',
+          glass: 'rgba(255, 255, 255, 0.88)',
         },
       },
       fontFamily: {
@@ -43,7 +47,7 @@ const config: Config = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'copper-shimmer': 'linear-gradient(135deg, #C98D78 0%, #F5F0EA 50%, #C98D78 100%)',
+        'copper-shimmer': 'linear-gradient(135deg, #C98D78 0%, #FAF7F2 50%, #A85D45 100%)',
       },
       keyframes: {
         float: {
