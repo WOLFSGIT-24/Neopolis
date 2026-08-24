@@ -1,0 +1,151 @@
+'use client'
+import React from 'react'
+import Image from 'next/image'
+import {
+  Sun,
+  Droplets,
+  Recycle,
+  Leaf,
+  ShieldCheck,
+  Zap,
+  Building,
+  CheckCircle2,
+} from 'lucide-react'
+
+export default function Sustainability() {
+  const ecoFeatures = [
+    {
+      icon: ShieldCheck,
+      title: 'IGBC Pre-Certified Platinum',
+      desc: 'Formally rated and audited for supreme environmental sustainability standards.',
+      badge: 'Certified',
+    },
+    {
+      icon: Sun,
+      title: 'Solar-Powered Utilities',
+      desc: 'Grid-tied rooftop solar photovoltaics powering common lighting and water circulation.',
+      badge: 'Renewable',
+    },
+    {
+      icon: Zap,
+      title: 'Energy-Efficient Spaces',
+      desc: 'Low-energy LED architectural luminaires and smart occupancy sensor controls throughout.',
+      badge: 'Efficiency',
+    },
+    {
+      icon: Droplets,
+      title: 'Rainwater Harvesting',
+      desc: 'Deep groundwater recharge percolation pits capturing 100% of seasonal runoff.',
+      badge: 'Conservation',
+    },
+    {
+      icon: Recycle,
+      title: 'Water Recycling (STP)',
+      desc: 'Dual plumbing infrastructure utilizing advanced tertiary treated water for landscape and flushing.',
+      badge: 'Zero Discharge',
+    },
+    {
+      icon: Building,
+      title: 'Low-Impact Construction',
+      desc: 'Optimized structural curing techniques reducing embodied carbon footprints significantly.',
+      badge: 'Responsible',
+    },
+    {
+      icon: Leaf,
+      title: 'Responsible Materials',
+      desc: 'Locally procured high-albedo roof pavers, AAC blocks and fly-ash based cement mixes.',
+      badge: 'Eco-Sourced',
+    },
+    {
+      icon: CheckCircle2,
+      title: 'Low-VOC & Eco-Safe Finishes',
+      desc: 'Non-toxic, low volatile organic compound paints, sealants and eco-safe adhesives for cleaner indoor air.',
+      badge: 'Clean Air',
+    },
+  ]
+
+  return (
+    <section className="relative w-full py-28 sm:py-36 bg-[#0B0F17] text-neo-ivory overflow-hidden border-t border-white/5">
+      {/* Background Subtle Green-Midnight Atmospheric Glow */}
+      <div className="absolute top-1/2 right-10 w-[600px] h-[600px] bg-emerald-950/20 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
+        {/* Top Editorial Row with IGBC Seal */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
+          <div className="space-y-4 max-w-3xl">
+            <span className="text-xs uppercase tracking-[0.35em] text-[#C98D78] font-medium block">
+              06 • Conscious Architecture
+            </span>
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif font-light text-white leading-[1.05]">
+              Engineered <br />
+              <span className="italic text-neo-peach font-normal">with the environment in mind.</span>
+            </h2>
+            <p className="text-sm sm:text-base text-neo-muted pt-2 leading-relaxed max-w-2xl">
+              Sustainable luxury is not a compromise — it is an elevation of living standards. Neo Towers integrates state-of-the-art ecological intelligence from ground podium to the highest crown.
+            </p>
+          </div>
+
+          {/* IGBC Seal Card */}
+          <div className="flex items-center gap-4 p-5 rounded-2xl bg-[#121824] border border-[#C98D78]/30 shrink-0">
+            <div className="w-14 h-14 relative flex items-center justify-center p-2 rounded-xl bg-white/5">
+              <Image
+                src="/neo-assets/lifeatneo/igbc-logo.svg"
+                alt="IGBC Pre-Certified"
+                width={48}
+                height={48}
+                className="object-contain brightness-110"
+              />
+            </div>
+            <div>
+              <span className="text-[10px] uppercase tracking-widest text-[#C98D78] font-mono block">
+                Green Building Council
+              </span>
+              <h4 className="text-base font-serif text-white font-normal">
+                IGBC Pre-Certified
+              </h4>
+              <p className="text-[11px] text-neo-muted">
+                Gold/Platinum Standard Ratings
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 8 Feature Pillars Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {ecoFeatures.map((f, idx) => {
+            const Icon = f.icon
+            return (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-[#121722]/70 border border-white/5 hover:border-[#C98D78]/40 transition-all duration-300 flex flex-col justify-between group hover:shadow-xl hover:shadow-emerald-950/20"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-[#C98D78]/20 flex items-center justify-center text-[#C98D78] transition-colors">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <span className="text-[10px] font-mono text-emerald-400/90 px-2 py-0.5 rounded-md bg-emerald-950/40 border border-emerald-800/30">
+                      {f.badge}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg font-serif text-white font-normal mb-1.5 group-hover:text-neo-peach transition-colors">
+                    {f.title}
+                  </h3>
+                  <p className="text-xs text-neo-muted leading-relaxed">
+                    {f.desc}
+                  </p>
+                </div>
+
+                <div className="pt-4 mt-6 border-t border-white/5 flex items-center gap-1.5 text-[11px] text-[#C98D78]/80 font-mono">
+                  <span className="w-1 h-1 rounded-full bg-[#C98D78]" />
+                  <span>Eco Standard</span>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+  )
+}

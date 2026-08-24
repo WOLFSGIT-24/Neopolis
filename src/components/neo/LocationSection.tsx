@@ -1,0 +1,123 @@
+'use client'
+import React from 'react'
+import Image from 'next/image'
+import { Trees, Waves, Building, Sparkles } from 'lucide-react'
+
+export default function LocationSection() {
+  const highlights = [
+    {
+      icon: Trees,
+      stat: '1,00,000+',
+      unit: 'Acres',
+      label: '111 GO Protected Greens',
+      desc: 'Uninterrupted pristine green canopy ensuring perpetual fresh air and ecological peace.',
+    },
+    {
+      icon: Waves,
+      stat: 'Osman Sagar',
+      unit: 'Lake Vista',
+      label: 'Panoramic Water Views',
+      desc: 'Mesmerizing sunset horizons reflecting over the tranquil waters of Osman Sagar.',
+    },
+    {
+      icon: Building,
+      stat: 'Financial District',
+      unit: 'Skyline',
+      label: 'High-Growth Tech Corridor',
+      desc: 'A futuristic city skyline glowing in the evening, just minutes from your front door.',
+    },
+  ]
+
+  return (
+    <section id="location" className="relative w-full py-24 sm:py-32 bg-[#10131A] text-neo-ivory overflow-hidden">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Left: Large Visual Frame */}
+          <div className="lg:col-span-6 relative">
+            <div className="relative aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden border border-[#C98D78]/25 shadow-2xl shadow-black/80 group">
+              <Image
+                src="/neo-assets/lifeatneo/carousel-images/osmansagarview.jpg"
+                alt="Osman Sagar Lake and 111 GO Greens around Neo Towers"
+                fill
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#10131A]/90 via-[#10131A]/20 to-transparent" />
+
+              {/* Floating Architectural Badge */}
+              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#10131A]/85 backdrop-blur-md border border-white/10 flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#C98D78] block font-medium">
+                    Permanent View Corridors
+                  </span>
+                  <p className="text-sm font-serif text-white">
+                    Adjoining 1,00,000+ Acres of Protected Biosphere
+                  </p>
+                </div>
+                <div className="w-9 h-9 rounded-full bg-[#C98D78]/20 flex items-center justify-center text-[#C98D78]">
+                  <Trees className="w-5 h-5" />
+                </div>
+              </div>
+            </div>
+
+            {/* Secondary Accent Render */}
+            <div className="hidden sm:block absolute -bottom-8 -right-8 w-44 h-32 rounded-xl overflow-hidden border border-[#C98D78]/40 shadow-2xl shadow-black z-10">
+              <Image
+                src="/neo-assets/lifeatneo/carousel-images/111go.jpg"
+                alt="Green Canopy"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/30" />
+            </div>
+          </div>
+
+          {/* Right: Editorial Typography & Statistics */}
+          <div className="lg:col-span-6 space-y-8">
+            <div className="space-y-3">
+              <span className="text-xs uppercase tracking-[0.3em] text-[#C98D78] font-medium block">
+                01 • The Setting
+              </span>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-white leading-tight">
+                Nature is <br />
+                <span className="italic text-neo-peach font-normal">your neighbour.</span>
+              </h2>
+              <p className="text-lg sm:text-xl font-serif italic text-neo-peach/90 pt-1">
+                A vista of blues & greens that extends beyond the horizon.
+              </p>
+            </div>
+
+            <p className="text-sm text-neo-muted leading-relaxed max-w-xl">
+              Nestled at the threshold of the 111 GO conservation belt, Neo Towers provides an eternal sanctuary of unpolluted greenery and shimmering lake vistas that will never be obstructed by future development.
+            </p>
+
+            {/* 3 Large Stat Blocks */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+              {highlights.map((item, idx) => {
+                const IconComponent = item.icon
+                return (
+                  <div
+                    key={idx}
+                    className="p-4 rounded-xl bg-[#18243A]/40 border border-white/5 hover:border-[#C98D78]/30 transition-all space-y-2"
+                  >
+                    <IconComponent className="w-5 h-5 text-[#C98D78]" />
+                    <div>
+                      <div className="text-2xl font-serif text-white font-normal leading-none">
+                        {item.stat}
+                      </div>
+                      <div className="text-[10px] uppercase tracking-wider text-[#E8C5B8] mt-1 font-medium">
+                        {item.unit}
+                      </div>
+                    </div>
+                    <p className="text-xs text-neo-muted line-clamp-2">
+                      {item.label}
+                    </p>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
