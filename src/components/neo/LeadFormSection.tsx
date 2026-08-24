@@ -9,7 +9,7 @@ export default function LeadFormSection() {
     phone: '',
     email: '',
     interestedIn: '3 BHK',
-    preferredTime: 'Morning (9 AM - 12 PM)',
+    preferredTime: 'Morning (9 AM to 12 PM)',
   })
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -30,7 +30,7 @@ export default function LeadFormSection() {
                 </span>
                 <h2 className="text-3xl sm:text-5xl md:text-6xl font-serif font-light text-[#10141E] leading-tight">
                   Let&apos;s make <br />
-                  <span className="italic text-[#A85D45] font-normal">Neo yours.</span>
+                  <span className="text-[#A85D45] font-normal">Neo yours</span>
                 </h2>
                 <p className="text-xs sm:text-sm text-[#5A6474] leading-relaxed pt-1 sm:pt-2">
                   Connect with our dedicated private client team for bespoke floor plan walkthroughs, pricing breakdowns, and VIP site visit reservations.
@@ -50,7 +50,7 @@ export default function LeadFormSection() {
                   <span>+91 9996 999 720</span>
                 </a>
                 <p className="text-[10px] sm:text-[11px] text-[#5A6474]">
-                  Available Mon – Sun, 9:00 AM to 8:00 PM IST
+                  Available Mon to Sun, 9:00 AM to 8:00 PM IST
                 </p>
               </div>
 
@@ -79,7 +79,7 @@ export default function LeadFormSection() {
                         phone: '',
                         email: '',
                         interestedIn: '3 BHK',
-                        preferredTime: 'Morning (9 AM - 12 PM)',
+                        preferredTime: 'Morning (9 AM to 12 PM)',
                       })
                     }}
                     className="px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#A85D45] text-white hover:opacity-90 transition-colors shadow-md"
@@ -153,8 +153,8 @@ export default function LeadFormSection() {
                           onChange={(e) => setFormData({ ...formData, interestedIn: e.target.value })}
                           className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-xl pl-10 pr-4 py-3 text-sm text-[#10141E] focus:outline-none focus:border-[#A85D45] appearance-none cursor-pointer"
                         >
-                          <option value="3 BHK">3 BHK Luxury (2,253 - 2,735 sq.ft.)</option>
-                          <option value="4 BHK">4 BHK Grand (3,220 - 4,505 sq.ft.)</option>
+                          <option value="3 BHK">3 BHK Luxury (2,253 to 2,735 sq.ft.)</option>
+                          <option value="4 BHK">4 BHK Grand (3,220 to 4,505 sq.ft.)</option>
                           <option value="Sky Office">Sky Office (Levels 48 & 49)</option>
                           <option value="Investment">Prime Investment</option>
                         </select>
@@ -172,9 +172,9 @@ export default function LeadFormSection() {
                           onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
                           className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-xl pl-10 pr-4 py-3 text-sm text-[#10141E] focus:outline-none focus:border-[#A85D45] appearance-none cursor-pointer"
                         >
-                          <option value="Morning">Morning (9 AM - 12 PM)</option>
-                          <option value="Afternoon">Afternoon (12 PM - 4 PM)</option>
-                          <option value="Evening">Evening (4 PM - 8 PM)</option>
+                          <option value="Morning">Morning (9 AM to 12 PM)</option>
+                          <option value="Afternoon">Afternoon (12 PM to 4 PM)</option>
+                          <option value="Evening">Evening (4 PM to 8 PM)</option>
                           <option value="Weekend">Weekend Site Visit</option>
                         </select>
                       </div>

@@ -40,14 +40,14 @@ export default function TermsConditionsModal() {
         'Stamp duty, registration charges, transfer duty, and mutation fees are payable directly to the Registration & Stamps Department, Government of Telangana, at the prevailing rates at the time of execution.',
     },
     {
-      title: 'Price-Change Disclaimer',
+      title: 'Price Change Disclaimer',
       content:
         'Prices, unit availability, and promotional offers are subject to change without prior notice at the sole discretion of Yula Globus Developers LLP. Price lock is applicable strictly upon receipt of booking advance and realization of booking payment.',
     },
     {
       title: 'Statutory Bank Collection Account',
       content:
-        'All booking amounts and milestone payments must strictly be made via crossed cheque / RTGS / NEFT in favor of the designated TG-RERA project master escrow account. Cash transactions are strictly not permitted.',
+        'All booking amounts and milestone payments must strictly be made via crossed cheque / RTGS / NEFT in favor of the designated TG RERA project master escrow account. Cash transactions are strictly not permitted.',
     },
   ]
 
@@ -89,7 +89,7 @@ export default function TermsConditionsModal() {
             {clauses.map((clause, idx) => (
               <div key={idx} className="border-b border-black/5 pb-3">
                 <h4 className="font-semibold text-[#10141E] text-sm mb-1 flex items-center gap-2">
-                  <span className="text-[#A85D45] text-xs font-mono">{String(idx + 1).padStart(2, '0')}.</span>
+                  <span className="text-[#A85D45] text-xs font-mono">{String(idx + 1).padStart(2, '0')}</span>
                   {clause.title}
                 </h4>
                 <p className="text-[#5A6474] pl-6">{clause.content}</p>

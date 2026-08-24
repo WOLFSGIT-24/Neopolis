@@ -9,44 +9,44 @@ export default function Skydeck() {
   const skyFeatures = [
     {
       title: 'Sky Amphitheatre',
-      tagline: 'High-Altitude Starlight Concerts',
+      tagline: 'High Altitude Starlight Concerts',
       image: '/neo-assets/lifeatneo/skydeck/sky_amphithetre.jpg',
-      desc: 'Terraced open-sky auditorium located on Level 59, featuring bespoke acoustic enclosures for intimate musical performances and sunset screenings.',
+      desc: 'Terraced open sky auditorium located on Level 59, featuring bespoke acoustic enclosures for intimate musical performances and sunset screenings.',
       icon: Moon,
     },
     {
       title: 'Surya Namaskar Lawn',
       tagline: 'Dawn Yoga at 200 Metres',
       image: '/neo-assets/lifeatneo/skydeck/suryanamaskar_lawn.jpg',
-      desc: 'Lush natural-turf rooftop meditation deck facing east, greeting the morning sunrise over Hyderabad’s tranquil lakes.',
+      desc: 'Lush natural turf rooftop meditation deck facing east, greeting the morning sunrise over Hyderabad’s tranquil lakes.',
       icon: Sun,
     },
     {
       title: 'The Sky Trail & Promenade',
-      tagline: 'Cloud-Level Jogging Circuit',
+      tagline: 'Cloud Level Jogging Circuit',
       image: '/neo-assets/lifeatneo/skydeck/skydeck.jpg',
-      desc: 'A continuous glass-balustraded jogging track tracing the perimeter of both towers with thrilling 360-degree horizon vistas.',
+      desc: 'A continuous glass balustraded jogging track tracing the perimeter of both towers with thrilling 360 degree horizon vistas.',
       icon: Wind,
     },
     {
       title: 'Star Map & Astronomy Deck',
       tagline: 'Gaze into the Cosmos',
       image: '/neo-assets/home/skydeck.jpg',
-      desc: 'Deep observation deck equipped with high-powered astronomical telescopes and celestial constellation guides away from ground light pollution.',
+      desc: 'Deep observation deck equipped with high powered astronomical telescopes and celestial constellation guides away from ground light pollution.',
       icon: Eye,
     },
     {
       title: 'Sky Café & High Tea Bar',
       tagline: 'Bespoke Brews with Cloud Views',
       image: '/neo-assets/lifeatneo/carousel-images/riseabove.jpg',
-      desc: 'Artisanal roastery and open-air rooftop bar serving hand-crafted mocktails and continental appetizers at twilight.',
+      desc: 'Artisanal roastery and open air rooftop bar serving hand crafted mocktails and continental appetizers at twilight.',
       icon: Coffee,
     },
     {
       title: 'Rooftop Infinity Edge',
       tagline: 'Swimming in the Stratosphere',
       image: '/neo-assets/clubneo/infinity-pool.png',
-      desc: 'An architectural marvel where zero-edge crystal waters visually blend with the vast Telangana sky.',
+      desc: 'An architectural marvel where zero edge crystal waters visually blend with the vast Telangana sky.',
       icon: Waves,
     },
   ]
@@ -65,7 +65,7 @@ export default function Skydeck() {
 
           <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
             SKYDECK <br />
-            <span className="italic text-[#A85D45] font-normal">Life between the clouds.</span>
+            <span className="text-[#A85D45] font-normal">Life between the clouds</span>
           </h2>
 
           <p className="text-sm sm:text-base text-[#5A6474] max-w-xl mx-auto">

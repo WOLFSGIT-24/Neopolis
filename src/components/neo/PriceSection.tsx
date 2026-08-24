@@ -23,7 +23,7 @@ export default function PriceSection() {
       step: '03',
       percentage: '45%',
       title: 'Superstructure Progress',
-      desc: 'Linked milestone disbursements across 57 high-rise floor slabs.',
+      desc: 'Linked milestone disbursements across 57 high rise floor slabs.',
     },
     {
       step: '04',
@@ -42,8 +42,8 @@ export default function PriceSection() {
             Payment Plan
           </span>
           <h2 className="text-3xl sm:text-5xl font-serif font-light text-[#10141E] leading-tight">
-            Simple, milestone-based <br />
-            <span className="italic text-[#A85D45] font-normal">payment.</span>
+            Simple, milestone based <br />
+            <span className="text-[#A85D45] font-normal">payment</span>
           </h2>
           <div className="pt-2 inline-flex items-center gap-2 px-5 py-1.5 rounded-full bg-white border border-[#A85D45]/30 text-xs font-mono text-[#A85D45] shadow-sm">
             <span>Base Price:</span>

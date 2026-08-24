@@ -29,14 +29,14 @@ export default function ExperienceIntro() {
             </div>
             <h2 className="text-3xl sm:text-5xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
               Experience <br />
-              <span className="italic font-normal text-[#A85D45]">life above</span> <br />
-              everything.
+              <span className="font-normal text-[#A85D45]">life above</span> <br />
+              everything
             </h2>
           </div>
 
           <div className="lg:col-span-6 space-y-4 sm:space-y-6 lg:pl-8 lg:border-l border-black/10">
             <p className="text-base sm:text-xl text-[#10141E]/90 font-serif leading-relaxed">
-              Neo isn’t simply a residence. It’s an elevated way of living — where nature, architecture, wellness, work and leisure come together in one extraordinary address.
+              Neo isn’t simply a residence. It’s an elevated way of living, where nature, architecture, wellness, work and leisure come together in one extraordinary address.
             </p>
             <p className="text-xs sm:text-sm text-[#5A6474] leading-relaxed">
               Rising 57 storeys above Neopolis Kokapet, Neo Towers redefines high-rise luxury through seamless layers of private, community, and sky-level sanctuaries crafted for discerning families.
@@ -51,7 +51,7 @@ export default function ExperienceIntro() {
               Architectural Layers
             </span>
             <span className="text-xs text-[#5A6474] font-mono font-medium">
-              01 — 07
+              01 to 07
             </span>
           </div>
 

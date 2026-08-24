@@ -9,12 +9,12 @@ export default function AmenitiesInteractive() {
       id: 'wellness',
       name: 'Wellness',
       icon: Activity,
-      headline: 'Holistic rejuvenation in high-altitude serenity.',
+      headline: 'Holistic rejuvenation in high altitude serenity',
       image: '/neo-assets/clubneo/gym.jpg',
       items: [
-        { name: 'State-of-the-Art Gym', detail: 'Equipped with Technogym biometric apparatus & cardio suites' },
+        { name: 'State of the Art Gym', detail: 'Equipped with Technogym biometric apparatus & cardio suites' },
         { name: 'Fitness Strip & Reflexology Track', detail: 'Outdoor shaded jogging and acupressure pathways' },
-        { name: 'Surya Namaskar Lawn', detail: 'Sun-salutation elevated yoga deck facing dawn horizons' },
+        { name: 'Surya Namaskar Lawn', detail: 'Sun salutation elevated yoga deck facing dawn horizons' },
         { name: 'Sky Gym at Level 58', detail: 'Aerobic fitness overlooking the Osman Sagar lake' },
       ],
     },
@@ -22,23 +22,23 @@ export default function AmenitiesInteractive() {
       id: 'recreation',
       name: 'Recreation',
       icon: Trophy,
-      headline: 'Competitive courts & multi-sport arenas.',
+      headline: 'Competitive courts & multi sport arenas',
       image: '/neo-assets/clubneo/clubneo_LARGE.jpeg',
       items: [
-        { name: 'Full-Size Basketball Court', detail: 'Professional FIBA-spec outdoor surface' },
+        { name: 'Full Size Basketball Court', detail: 'Professional FIBA spec outdoor surface' },
         { name: 'Tennis & Squash Courts', detail: 'Acoustic squash arenas and synthetic tennis turf' },
-        { name: 'Indoor Badminton Arena', detail: 'Multi-court air-conditioned wooden flooring' },
-        { name: 'Pickleball & Box Cricket', detail: 'Floodlit evening sports cages for fast-paced action' },
+        { name: 'Indoor Badminton Arena', detail: 'Multi court air conditioned wooden flooring' },
+        { name: 'Pickleball & Box Cricket', detail: 'Floodlit evening sports cages for fast paced action' },
       ],
     },
     {
       id: 'family',
       name: 'Family',
       icon: Heart,
-      headline: 'Safe nurturing spaces for every generation.',
+      headline: 'Safe nurturing spaces for every generation',
       image: '/neo-assets/lifeatneo/features/play_park.jpg',
       items: [
-        { name: 'Kids Themed Adventure Park', detail: 'Zero-traffic play zones with soft rubber shock pads' },
+        { name: 'Kids Themed Adventure Park', detail: 'Zero traffic play zones with soft rubber shock pads' },
         { name: 'Dedicated Crèche & Daycare', detail: 'Trained staff supervised activity zone for toddlers' },
         { name: 'Pet Agility Park', detail: 'Enclosed freedom zone with water fountains for dogs' },
       ],
@@ -47,10 +47,10 @@ export default function AmenitiesInteractive() {
       id: 'leisure',
       name: 'Leisure',
       icon: Coffee,
-      headline: 'Cinematic moments and suspended waters.',
+      headline: 'Cinematic moments and suspended waters',
       image: '/neo-assets/clubneo/infinity-pool.png',
       items: [
-        { name: 'Rooftop Infinity Lap Pool', detail: 'Temperature-controlled horizon swimming deck' },
+        { name: 'Rooftop Infinity Lap Pool', detail: 'Temperature controlled horizon swimming deck' },
         { name: 'Sky Café & Juice Bar', detail: 'Artisanal coffee and healthy refreshments at cloud height' },
         { name: 'Private Preview Theatre', detail: '4K laser projection with Dolby Atmos acoustic acoustics' },
         { name: 'Sunset Amphitheatre', detail: 'Terraced social seating overlooking city lights' },
@@ -60,12 +60,12 @@ export default function AmenitiesInteractive() {
       id: 'community',
       name: 'Community',
       icon: Users,
-      headline: 'Intellectual and cultural congregation.',
+      headline: 'Intellectual and cultural congregation',
       image: '/neo-assets/clubneo/senior_citizen.webp',
       items: [
         { name: 'Senior Citizens Lounge', detail: 'Quiet, serene gathering spaces with ambient seating' },
         { name: 'Art Gallery & Exhibition Foyer', detail: 'Curated cultural displays and sculpture niches' },
-        { name: 'Learning Centre & E-Library', detail: 'High-speed quiet study carrels and digital libraries' },
+        { name: 'Learning Centre & E-Library', detail: 'High speed quiet study carrels and digital libraries' },
         { name: 'Community Banquets & Lounge', detail: 'Lavish hosting spaces for family celebrations' },
       ],
     },
@@ -84,7 +84,7 @@ export default function AmenitiesInteractive() {
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-serif font-light text-[#10141E] leading-tight">
             Designed around <br />
-            <span className="italic text-[#A85D45] font-normal">the way you live.</span>
+            <span className="text-[#A85D45] font-normal">the way you live</span>
           </h2>
           <p className="text-xs sm:text-sm text-[#5A6474] max-w-xl mx-auto">
             104,000 square feet of curated leisure and wellness spaces segregated into five intuitive life domains.

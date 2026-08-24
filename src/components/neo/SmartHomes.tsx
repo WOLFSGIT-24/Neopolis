@@ -27,14 +27,14 @@ export default function SmartHomes() {
     },
     {
       icon: Sliders,
-      title: 'One-Touch Scenes',
-      desc: 'Create and activate custom ambience presets (Cinema, Dinner, Morning Wake-up, Away) with a single tap.',
+      title: 'One Touch Scenes',
+      desc: 'Create and activate custom ambience presets (Cinema, Dinner, Morning Wake up, Away) with a single tap.',
       status: 'Custom Presets',
     },
     {
       icon: Mic,
       title: 'Voice Ready',
-      desc: 'Native zero-friction compatibility with Amazon Alexa, Apple HomeKit and Google Home assistant ecosystems.',
+      desc: 'Native zero friction compatibility with Amazon Alexa, Apple HomeKit and Google Home assistant ecosystems.',
       status: 'Voice Activated',
     },
     {
@@ -52,14 +52,14 @@ export default function SmartHomes() {
     {
       icon: Cpu,
       title: 'Future Ready Architecture',
-      desc: 'Built on modular IoT protocols, fiber-to-the-home backbone, and structured cabling prepared for future updates.',
+      desc: 'Built on modular IoT protocols, fiber to the home backbone, and structured cabling prepared for future updates.',
       status: 'Modular Bus',
     },
     {
       icon: Wifi,
       title: 'Global Remote Access',
       desc: 'Monitor door locks, security cameras, access authorizations and power consumption from anywhere across the globe.',
-      status: '256-Bit Encrypted',
+      status: '256 Bit Encrypted',
     },
   ]
 
@@ -83,11 +83,11 @@ export default function SmartHomes() {
               05 • Intelligent Automation
             </span>
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-serif font-light text-[#10141E] leading-[1.05]">
-              Your world. <br />
-              <span className="italic text-[#A85D45] font-normal">At your fingertips.</span>
+              Your world <br />
+              <span className="text-[#A85D45] font-normal">At your fingertips</span>
             </h2>
             <p className="text-xs sm:text-sm text-[#5A6474] pt-2 leading-relaxed">
-              Every residence at Neo Towers is engineered as a cognitive living environment. Seamlessly orchestrate comfort, security, and climate with whisper-quiet sophistication.
+              Every residence at Neo Towers is engineered as a cognitive living environment. Seamlessly orchestrate comfort, security, and climate with whisper quiet sophistication.
             </p>
           </div>
 

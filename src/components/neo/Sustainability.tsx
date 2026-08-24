@@ -16,20 +16,20 @@ export default function Sustainability() {
   const ecoFeatures = [
     {
       icon: ShieldCheck,
-      title: 'IGBC Pre-Certified Platinum',
+      title: 'IGBC Pre Certified Platinum',
       desc: 'Formally rated and audited for supreme environmental sustainability standards.',
       badge: 'Certified',
     },
     {
       icon: Sun,
-      title: 'Solar-Powered Utilities',
-      desc: 'Grid-tied rooftop solar photovoltaics powering common lighting and water circulation.',
+      title: 'Solar Powered Utilities',
+      desc: 'Grid tied rooftop solar photovoltaics powering common lighting and water circulation.',
       badge: 'Renewable',
     },
     {
       icon: Zap,
-      title: 'Energy-Efficient Spaces',
-      desc: 'Low-energy LED architectural luminaires and smart occupancy sensor controls throughout.',
+      title: 'Energy Efficient Spaces',
+      desc: 'Low energy LED architectural luminaires and smart occupancy sensor controls throughout.',
       badge: 'Efficiency',
     },
     {
@@ -46,20 +46,20 @@ export default function Sustainability() {
     },
     {
       icon: Building,
-      title: 'Low-Impact Construction',
+      title: 'Low Impact Construction',
       desc: 'Optimized structural curing techniques reducing embodied carbon footprints significantly.',
       badge: 'Responsible',
     },
     {
       icon: Leaf,
       title: 'Responsible Materials',
-      desc: 'Locally procured high-albedo roof pavers, AAC blocks and fly-ash based cement mixes.',
+      desc: 'Locally procured high albedo roof pavers, AAC blocks and fly ash based cement mixes.',
       badge: 'Eco-Sourced',
     },
     {
       icon: CheckCircle2,
-      title: 'Low-VOC & Eco-Safe Finishes',
-      desc: 'Non-toxic, low volatile organic compound paints, sealants and eco-safe adhesives for cleaner indoor air.',
+      title: 'Low VOC & Eco Safe Finishes',
+      desc: 'Non toxic, low volatile organic compound paints, sealants and eco safe adhesives for cleaner indoor air.',
       badge: 'Clean Air',
     },
   ]
@@ -75,10 +75,10 @@ export default function Sustainability() {
             </span>
             <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
               Engineered <br />
-              <span className="italic text-[#A85D45] font-normal">with the environment in mind.</span>
+              <span className="text-[#A85D45] font-normal">with the environment in mind</span>
             </h2>
             <p className="text-sm sm:text-base text-[#5A6474] pt-2 leading-relaxed max-w-2xl">
-              Sustainable luxury is not a compromise — it is an elevation of living standards. Neo Towers integrates state-of-the-art ecological intelligence from ground podium to the highest crown.
+              Sustainable luxury is not a compromise, it is an elevation of living standards. Neo Towers integrates state of the art ecological intelligence from ground podium to the highest crown.
             </p>
           </div>
 

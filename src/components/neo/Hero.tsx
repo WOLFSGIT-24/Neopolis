@@ -61,8 +61,8 @@ export default function Hero() {
           <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-light tracking-tight text-white leading-[0.95] drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
             Neo Towers
           </h1>
-          <p className="text-lg sm:text-2xl md:text-3xl font-serif italic text-[#F3ECE2] font-light max-w-2xl mx-auto pt-2 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
-            Where life rises above the ordinary.
+          <p className="text-lg sm:text-2xl md:text-3xl font-serif text-[#F3ECE2] font-normal max-w-2xl mx-auto pt-2 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
+            Where life rises above the ordinary
           </p>
         </div>
 

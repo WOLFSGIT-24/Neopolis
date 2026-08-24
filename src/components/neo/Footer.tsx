@@ -41,14 +41,14 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm text-[#5A6474] leading-relaxed max-w-sm">
-              An iconic 57-storey twin-tower residential monument rising above Neopolis Kokapet, delivering an unparalleled standard of elevated luxury living.
+              An iconic 57 storey twin tower residential monument rising above Neopolis Kokapet, delivering an unparalleled standard of elevated luxury living.
             </p>
 
             {/* Address */}
             <div className="space-y-2 text-xs text-[#5A6474]">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#A85D45] shrink-0 mt-0.5" />
-                <span>Plot No. 11, Neopolis, Kokapet, Gandipet, Telangana – 500075</span>
+                <span>Plot No. 11, Neopolis, Kokapet, Gandipet, Telangana 500075</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#A85D45] shrink-0" />
@@ -130,7 +130,7 @@ export default function Footer() {
                 onClick={openBrochure}
                 className="w-full py-2.5 rounded-lg bg-white hover:bg-[#A85D45] hover:text-white text-xs uppercase tracking-wider text-[#A85D45] font-semibold border border-[#A85D45]/30 transition-colors shadow-sm"
               >
-                Download E-Brochure
+                Download Brochure
               </button>
               <button
                 onClick={openTerms}

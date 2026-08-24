@@ -7,19 +7,19 @@ export default function StatisticsSection() {
   const majorStats = [
     { value: '4.36', unit: 'Acres', label: 'Sprawling Integrated Masterplan' },
     { value: '2', unit: 'Towers', label: 'Iconic Architectural Monuments' },
-    { value: '57', unit: 'Stories', label: 'Sky-Piercing Elevated Floors' },
-    { value: '711', unit: 'Residences', label: 'Exclusive Ultra-Luxury Homes' },
+    { value: '57', unit: 'Stories', label: 'Sky Piercing Elevated Floors' },
+    { value: '711', unit: 'Residences', label: 'Exclusive Ultra Luxury Homes' },
     { value: '3 & 4', unit: 'BHK Homes', label: 'Palatial Sky Suites' },
-    { value: '2,253 – 4,505', unit: 'Sq. Ft.', label: 'Expansive Living Footprints' },
+    { value: '2,253 to 4,505', unit: 'Sq. Ft.', label: 'Expansive Living Footprints' },
   ]
 
   const highlights = [
-    { title: '104,000 sq. ft.', desc: 'Curated world-class indoor & outdoor amenities' },
-    { title: '17 High-Speed Elevators', desc: 'Seamless, frictionless vertical movement' },
-    { title: 'Vehicle-Free Podium', desc: '100% pedestrianized safe ground & landscape zones' },
-    { title: '3.3m Floor-to-Floor Height', desc: 'Grand European ceiling heights & expansive volume' },
-    { title: 'Sky Offices — Levels 48 & 49', desc: 'Work with panoramic cloudscape vistas' },
-    { title: 'Skydeck — Levels 58 & 59', desc: 'The pinnacle of rooftop leisure & astronomy decks' },
+    { title: '104,000 sq. ft.', desc: 'Curated world class indoor & outdoor amenities' },
+    { title: '17 High Speed Elevators', desc: 'Seamless, frictionless vertical movement' },
+    { title: 'Vehicle Free Podium', desc: '100% pedestrianized safe ground & landscape zones' },
+    { title: '3.3m Floor to Floor Height', desc: 'Grand European ceiling heights & expansive volume' },
+    { title: 'Sky Offices (Levels 48 & 49)', desc: 'Work with panoramic cloudscape vistas' },
+    { title: 'Skydeck (Levels 58 & 59)', desc: 'The pinnacle of rooftop leisure & astronomy decks' },
   ]
 
   return (
@@ -42,7 +42,7 @@ export default function StatisticsSection() {
             Project Overview by the Numbers
           </span>
           <h2 className="text-3xl sm:text-5xl font-serif font-light text-[#10141E] leading-tight">
-            Monumental <span className="italic text-[#A85D45] font-normal">Scale.</span>
+            Monumental <span className="text-[#A85D45] font-normal">Scale</span>
           </h2>
           <p className="text-xs sm:text-sm text-[#5A6474] max-w-lg mx-auto">
             Engineered with uncompromising precision to create Hyderabad&apos;s most prestigious residential benchmark.

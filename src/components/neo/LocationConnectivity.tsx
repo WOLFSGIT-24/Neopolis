@@ -29,7 +29,7 @@ export default function LocationConnectivity() {
             </span>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-[#10141E] leading-tight">
               Connected to <br />
-              <span className="italic text-[#A85D45] font-normal">everything that matters.</span>
+              <span className="text-[#A85D45] font-normal">everything that matters</span>
             </h2>
           </div>
 

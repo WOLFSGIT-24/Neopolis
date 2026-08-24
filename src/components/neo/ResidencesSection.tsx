@@ -12,40 +12,40 @@ export default function ResidencesSection() {
   const towerAPlans = [
     {
       unit: 'Unit 01',
-      title: 'Tower A — Unit 1 (East Facing)',
+      title: 'Tower A Unit 1 (East Facing)',
       type: '3 BHK + Home Office',
       sba: '2,485 Sq. Ft.',
       carpet: '1,720 Sq. Ft.',
       facing: 'East Facing (Lake View)',
-      balcony: '8 ft. Panoramic Sit-out',
+      balcony: '8 ft. Panoramic Sit out',
       image: '/neo-assets/floorImages/floor-plans/Unit-1_Tower-A_NEO.jpg',
-      highlights: ['Master suite with walk-in closet', 'Separate utility & wet kitchen', 'Lake Osman Sagar facing'],
+      highlights: ['Master suite with walk in closet', 'Separate utility & wet kitchen', 'Lake Osman Sagar facing'],
     },
     {
       unit: 'Unit 02',
-      title: 'Tower A — Unit 2 (North Facing)',
+      title: 'Tower A Unit 2 (North Facing)',
       type: '3 BHK Luxury',
       sba: '2,253 Sq. Ft.',
       carpet: '1,560 Sq. Ft.',
       facing: 'North Facing (City Skyline)',
-      balcony: 'Deep Double-Height Terrace',
+      balcony: 'Deep Double Height Terrace',
       image: '/neo-assets/floorImages/floor-plans/Unit-2_Tower-A.jpg',
-      highlights: ['Vastu compliant entry foyer', 'Spacious dining salon', 'Cross-ventilation layout'],
+      highlights: ['Vastu compliant entry foyer', 'Spacious dining salon', 'Cross ventilation layout'],
     },
     {
       unit: 'Unit 03',
-      title: 'Tower A — Unit 3 (Corner Sky Suite)',
+      title: 'Tower A Unit 3 (Corner Sky Suite)',
       type: '4 BHK Grand Residence',
       sba: '3,220 Sq. Ft.',
       carpet: '2,280 Sq. Ft.',
-      facing: 'North-East Corner',
+      facing: 'North East Corner',
       balcony: 'Wraparound Glass Balcony',
       image: '/neo-assets/floorImages/floor-plans/Unit-3_Tower-A_NEO.jpg',
-      highlights: ['Corner 270-degree view horizon', 'All ensuite bedrooms', "Maid's room with private bath"],
+      highlights: ['Corner 270 degree view horizon', 'All ensuite bedrooms', "Maid's room with private bath"],
     },
     {
       unit: 'Unit 04',
-      title: 'Tower A — Unit 4 (East Facing)',
+      title: 'Tower A Unit 4 (East Facing)',
       type: '3 BHK + Study',
       sba: '2,735 Sq. Ft.',
       carpet: '1,910 Sq. Ft.',
@@ -56,56 +56,56 @@ export default function ResidencesSection() {
     },
     {
       unit: 'Unit 05',
-      title: 'Tower A — Unit 5 (West Facing)',
+      title: 'Tower A Unit 5 (West Facing)',
       type: '3 BHK Premium',
       sba: '2,360 Sq. Ft.',
       carpet: '1,640 Sq. Ft.',
       facing: 'West Facing (Sunset Vista)',
-      balcony: 'Twilight Sit-out Balcony',
+      balcony: 'Twilight Sit out Balcony',
       image: '/neo-assets/floorImages/floor-plans/Unit-5_Tower-A.jpg',
-      highlights: ['L-shaped living & dining layout', 'Spacious kitchen counter', 'Natural thermal insulation'],
+      highlights: ['L shaped living & dining layout', 'Spacious kitchen counter', 'Natural thermal insulation'],
     },
     {
       unit: 'Unit 06',
-      title: 'Tower A — Unit 6 (Palatial Suite)',
+      title: 'Tower A Unit 6 (Palatial Suite)',
       type: '4 BHK Ultra Luxury',
       sba: '4,100 Sq. Ft.',
       carpet: '2,920 Sq. Ft.',
-      facing: 'East-South Corner',
+      facing: 'East South Corner',
       balcony: 'Double Deck Sky Terrace',
       image: '/neo-assets/floorImages/floor-plans/Unit-6_Tower-A_NEO.jpg',
       highlights: ['Private elevator lobby access', 'Grand master bedroom suite', 'Chef kitchen & pantry'],
     },
     {
       unit: 'Unit 07',
-      title: 'Tower A — Unit 7 (Lake View Sky Villa)',
+      title: 'Tower A Unit 7 (Lake View Sky Villa)',
       type: '4 BHK Presidential',
       sba: '4,505 Sq. Ft.',
       carpet: '3,210 Sq. Ft.',
       facing: 'East Facing (Unblocked Lake)',
       balcony: 'Presidential Sundeck',
       image: '/neo-assets/floorImages/floor-plans/Unit-7_Tower-A_NEO.jpg',
-      highlights: ['Supreme living room length (32 ft)', 'Customizable bar counter zone', 'Double walk-in dressers'],
+      highlights: ['Supreme living room length (32 ft)', 'Customizable bar counter zone', 'Double walk in dressers'],
     },
     {
       unit: 'Unit 08',
-      title: 'Tower A — Unit 8 (North Facing)',
+      title: 'Tower A Unit 8 (North Facing)',
       type: '3 BHK Executive',
       sba: '2,510 Sq. Ft.',
       carpet: '1,750 Sq. Ft.',
       facing: 'North Facing',
       balcony: 'Deck with Planter Niche',
       image: '/neo-assets/floorImages/floor-plans/Unit-8_Tower-A_NEO.jpg',
-      highlights: ['Separate foyer entry zone', 'Dedicated pooja room space', 'Large floor-to-ceiling windows'],
+      highlights: ['Separate foyer entry zone', 'Dedicated pooja room space', 'Large floor to ceiling windows'],
     },
     {
       unit: 'Lobby',
-      title: 'Tower A — High-Speed Lift Lobby',
+      title: 'Tower A High Speed Lift Lobby',
       type: 'Core Infrastructure',
       sba: 'Central Core',
       carpet: 'Commercial Grade',
       facing: 'Internal Access',
-      balcony: '8 High-Speed Elevators',
+      balcony: '8 High Speed Elevators',
       image: '/neo-assets/floorImages/floor-plans/LIFT LOBBY TOWER A NEO.jpg',
       highlights: ['Destination control vertical transit', 'Service & stretcher lift', 'Designer marble wall paneling'],
     },
@@ -114,40 +114,40 @@ export default function ResidencesSection() {
   const towerBPlans = [
     {
       unit: 'Unit 01',
-      title: 'Tower B — Unit 1 (East Lake View)',
+      title: 'Tower B Unit 1 (East Lake View)',
       type: '4 BHK Grand Suite',
       sba: '3,850 Sq. Ft.',
       carpet: '2,740 Sq. Ft.',
       facing: 'East Facing (Lake View)',
       balcony: 'Wraparound Sky Deck',
       image: '/neo-assets/floorImages/floor-plans/Unit-1_Tower-B_NEO.jpg',
-      highlights: ['Panoramic view from all bedrooms', 'Pooja room & utility balcony', 'Private foyer drop-off'],
+      highlights: ['Panoramic view from all bedrooms', 'Pooja room & utility balcony', 'Private foyer drop off'],
     },
     {
       unit: 'Unit 02',
-      title: 'Tower B — Unit 2 (North Facing)',
+      title: 'Tower B Unit 2 (North Facing)',
       type: '3 BHK + Lounge',
       sba: '2,640 Sq. Ft.',
       carpet: '1,850 Sq. Ft.',
       facing: 'North Facing',
-      balcony: 'Expansive Sit-out',
+      balcony: 'Expansive Sit out',
       image: '/neo-assets/floorImages/floor-plans/Unit-2_Tower-B_NEO.jpg',
       highlights: ['Optimal cross breeze design', 'Smart home automation hub', 'Spacious master bathroom'],
     },
     {
       unit: 'Unit 03',
-      title: 'Tower B — Unit 3 (Grand Corner Residence)',
+      title: 'Tower B Unit 3 (Grand Corner Residence)',
       type: '4 BHK Luxury',
       sba: '4,250 Sq. Ft.',
       carpet: '3,050 Sq. Ft.',
-      facing: 'North-East Corner',
+      facing: 'North East Corner',
       balcony: 'Grand Balcony Terrace',
       image: '/neo-assets/floorImages/floor-plans/Unit-3_Tower-B_NEO.jpg',
-      highlights: ['Double master suites', 'Separate domestic helper quarters', 'Soundproof double-glazed glass'],
+      highlights: ['Double master suites', 'Separate domestic helper quarters', 'Soundproof double glazed glass'],
     },
     {
       unit: 'Unit 04',
-      title: 'Tower B — Unit 4 (Sunset View)',
+      title: 'Tower B Unit 4 (Sunset View)',
       type: '3 BHK Executive',
       sba: '2,420 Sq. Ft.',
       carpet: '1,690 Sq. Ft.',
@@ -158,25 +158,25 @@ export default function ResidencesSection() {
     },
     {
       unit: 'Unit 05',
-      title: 'Tower B — Unit 5 (Sky Villa Residence)',
+      title: 'Tower B Unit 5 (Sky Villa Residence)',
       type: '4 BHK Presidential',
       sba: '4,505 Sq. Ft.',
       carpet: '3,210 Sq. Ft.',
       facing: 'East Facing',
       balcony: 'Grand Panoramic Deck',
       image: '/neo-assets/floorImages/floor-plans/Unit-5_Tower-B_NEO.jpg',
-      highlights: ['Palatial living & dining expanses', 'Private service corridor', 'Ultra-premium bath fittings'],
+      highlights: ['Palatial living & dining expanses', 'Private service corridor', 'Ultra premium bath fittings'],
     },
     {
       unit: 'Lobby',
-      title: 'Tower B — High-Speed Lift Lobby',
+      title: 'Tower B High Speed Lift Lobby',
       type: 'Core Infrastructure',
       sba: 'Central Core',
       carpet: 'Commercial Grade',
       facing: 'Internal Access',
-      balcony: '9 High-Speed Elevators',
+      balcony: '9 High Speed Elevators',
       image: '/neo-assets/floorImages/floor-plans/LIFT LOBBY TOWER B NEO.jpg',
-      highlights: ['Touchless elevator call panels', 'Dedicated fire & service elevators', 'Air-conditioned transit lobby'],
+      highlights: ['Touchless elevator call panels', 'Dedicated fire & service elevators', 'Air conditioned transit lobby'],
     },
   ]
 
@@ -194,10 +194,10 @@ export default function ResidencesSection() {
             </span>
             <h2 className="text-3xl sm:text-5xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
               RESIDENCES <br />
-              <span className="italic text-[#A85D45] font-normal">Homes designed to fit your life.</span>
+              <span className="text-[#A85D45] font-normal">Homes designed to fit your life</span>
             </h2>
             <p className="text-xs sm:text-sm text-[#5A6474] pt-1 sm:pt-2 leading-relaxed max-w-2xl">
-              Thoughtfully configured 3 & 4 BHK luxury residences characterized by soaring 3.3m floor-to-floor heights, zero wasted circulation, cross-ventilated living spaces, and expansive viewing decks.
+              Thoughtfully configured 3 & 4 BHK luxury residences characterized by soaring 3.3m floor to floor heights, zero wasted circulation, cross ventilated living spaces, and expansive viewing decks.
             </p>
           </div>
 
@@ -205,11 +205,11 @@ export default function ResidencesSection() {
           <div className="grid grid-cols-2 gap-2.5 sm:flex sm:items-center sm:gap-4 shrink-0">
             <div className="p-3 sm:p-4 rounded-xl bg-white border border-[#A85D45]/25 text-center shadow-sm">
               <span className="text-[10px] sm:text-xs font-mono uppercase text-[#A85D45] font-semibold block">3 BHK Homes</span>
-              <span className="text-base sm:text-xl font-serif text-[#10141E] font-medium">2,253 – 2,735+ sq.ft.</span>
+              <span className="text-base sm:text-xl font-serif text-[#10141E] font-medium">2,253 to 2,735 sq.ft.</span>
             </div>
             <div className="p-3 sm:p-4 rounded-xl bg-white border border-[#A85D45]/25 text-center shadow-sm">
               <span className="text-[10px] sm:text-xs font-mono uppercase text-[#A85D45] font-semibold block">4 BHK Homes</span>
-              <span className="text-base sm:text-xl font-serif text-[#10141E] font-medium">3,220 – 4,505+ sq.ft.</span>
+              <span className="text-base sm:text-xl font-serif text-[#10141E] font-medium">3,220 to 4,505 sq.ft.</span>
             </div>
           </div>
         </div>
@@ -285,7 +285,7 @@ export default function ResidencesSection() {
                 {/* Hover overlay hint */}
                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white text-xs font-mono uppercase tracking-widest backdrop-blur-xs">
                   <Maximize2 className="w-4 h-4 text-[#C98D78]" />
-                  <span>Click to Zoom & View High-Res Plan</span>
+                  <span>Click to Zoom & View High Res Plan</span>
                 </div>
 
                 <div className="absolute top-4 left-4 px-3 py-1 rounded-md bg-white/95 backdrop-blur-md text-[11px] font-mono text-[#A85D45] font-semibold border border-[#A85D45]/20 shadow-sm">
@@ -303,7 +303,7 @@ export default function ResidencesSection() {
                 <h3 className="text-2xl sm:text-3xl font-serif text-[#10141E] font-medium">
                   {currentPlan.title}
                 </h3>
-                <p className="text-sm font-serif italic text-[#A85D45] mt-1 font-medium">
+                <p className="text-sm font-serif text-[#A85D45] mt-1 font-medium">
                   {currentPlan.type}
                 </p>
               </div>
@@ -311,7 +311,7 @@ export default function ResidencesSection() {
               {/* Area Specification Grid */}
               <div className="grid grid-cols-2 gap-3 p-4 rounded-xl bg-[#FAF7F2] border border-[#A85D45]/15">
                 <div>
-                  <span className="text-[10px] uppercase text-[#5A6474] block font-mono">Super Built-up Area</span>
+                  <span className="text-[10px] uppercase text-[#5A6474] block font-mono">Super Built up Area</span>
                   <span className="text-lg font-serif text-[#10141E] font-medium">{currentPlan.sba}</span>
                 </div>
                 <div>
@@ -365,7 +365,7 @@ export default function ResidencesSection() {
                   Enlarge Plan
                 </button>
                 <button
-                  onClick={() => openEnquiry(`Floor Plan Enquiry for ${selectedTower} - ${currentPlan.unit}`)}
+                  onClick={() => openEnquiry(`Floor Plan Enquiry for ${selectedTower} ${currentPlan.unit}`)}
                   className="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#C98D78] via-[#B8735C] to-[#A85D45] text-white text-xs uppercase tracking-[0.18em] font-semibold hover:opacity-95 transition-colors shadow-md"
                 >
                   Request Pricing

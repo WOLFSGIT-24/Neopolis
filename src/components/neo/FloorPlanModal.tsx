@@ -70,7 +70,7 @@ export default function FloorPlanModal() {
             <span className="text-[#10141E] font-medium">{selectedFloorPlan.type}</span>
           </div>
           <div>
-            <span className="text-[#5A6474] block text-[10px] uppercase font-mono">Super Built-up Area</span>
+            <span className="text-[#5A6474] block text-[10px] uppercase font-mono">Super Built up Area</span>
             <span className="text-[#A85D45] font-semibold">{selectedFloorPlan.sba}</span>
           </div>
           <div>
@@ -112,7 +112,7 @@ export default function FloorPlanModal() {
             <button
               onClick={() => {
                 closeFloorPlan()
-                openEnquiry(`Pricing for ${selectedFloorPlan.tower} - ${selectedFloorPlan.unit}`)
+                openEnquiry(`Pricing for ${selectedFloorPlan.tower} ${selectedFloorPlan.unit}`)
               }}
               className="px-5 py-2 rounded-lg bg-gradient-to-r from-[#C98D78] via-[#B8735C] to-[#A85D45] text-white font-semibold text-xs uppercase tracking-[0.15em] hover:opacity-90 transition-colors shadow-md"
             >

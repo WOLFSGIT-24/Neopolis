@@ -8,12 +8,12 @@ export default function SkyOffice() {
 
   const renders = [
     {
-      title: 'Panoramic High-Rise Interior',
+      title: 'Panoramic High Rise Interior',
       image: '/neo-assets/lifeatneo/sky-office/skyoffice_inside.jpg',
       tag: 'Interior Panorama',
     },
     {
-      title: 'Cloudscape Floor-to-Ceiling Horizon',
+      title: 'Cloudscape Floor to Ceiling Horizon',
       image: '/neo-assets/lifeatneo/sky-office/skyoffice_outsideview.jpg',
       tag: 'Lake & City Vista',
     },
@@ -28,27 +28,27 @@ export default function SkyOffice() {
     {
       icon: Briefcase,
       title: 'Executive Office Suites',
-      desc: 'Private sound-insulated private cabins with commanding corner vistas for focused leadership.',
+      desc: 'Private sound insulated private cabins with commanding corner vistas for focused leadership.',
     },
     {
       icon: Users,
-      title: 'Open-Sky Co-working Lounges',
+      title: 'Open Sky Co working Lounges',
       desc: 'Collaborative hot desks and designer breakout tables illuminated by natural daylight.',
     },
     {
       icon: Video,
-      title: 'High-Tech Boardrooms',
+      title: 'High Tech Boardrooms',
       desc: 'Equipped with 4K interactive presentation displays and hybrid video conferencing hardware.',
     },
     {
       icon: Monitor,
       title: 'Plug & Play Workstations',
-      desc: 'Ergonomic Herman Miller seating with high-speed dual redundant fiber connections.',
+      desc: 'Ergonomic Herman Miller seating with high speed dual redundant fiber connections.',
     },
     {
       icon: Wifi,
       title: 'Acoustic Meeting Pods',
-      desc: 'Zero-distraction private phone booths and client briefing pods on Levels 48 & 49.',
+      desc: 'Zero distraction private phone booths and client briefing pods on Levels 48 & 49.',
     },
   ]
 
@@ -63,13 +63,13 @@ export default function SkyOffice() {
             </span>
             <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
               SKY OFFICE <br />
-              <span className="italic text-[#A85D45] font-normal">Work above the ordinary.</span>
+              <span className="text-[#A85D45] font-normal">Work above the ordinary</span>
             </h2>
           </div>
 
           <div className="lg:col-span-6 lg:pl-8 lg:border-l border-black/10 space-y-4">
             <p className="text-base sm:text-lg text-[#10141E]/90 font-serif leading-relaxed">
-              A workspace designed to change your perspective — elevated, connected and surrounded by expansive views. Why commute across town when your global executive suite is right an elevator ride away?
+              A workspace designed to change your perspective, elevated, connected and surrounded by expansive views. Why commute across town when your global executive suite is right an elevator ride away?
             </p>
             <div className="flex items-center gap-3 text-xs uppercase tracking-wider text-[#A85D45] font-mono font-semibold">
               <span>Levels 48 & 49</span> • <span>Exclusive Residents Workspace</span>

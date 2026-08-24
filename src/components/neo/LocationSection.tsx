@@ -78,10 +78,10 @@ export default function LocationSection() {
               </span>
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-[#10141E] leading-tight">
                 Nature is <br />
-                <span className="italic text-[#A85D45] font-normal">your neighbour.</span>
+                <span className="text-[#A85D45] font-normal">your neighbour</span>
               </h2>
-              <p className="text-lg sm:text-xl font-serif italic text-[#A85D45] pt-1">
-                A vista of blues & greens that extends beyond the horizon.
+              <p className="text-lg sm:text-xl font-serif text-[#A85D45] pt-1 font-normal">
+                A vista of blues & greens that extends beyond the horizon
               </p>
             </div>
 

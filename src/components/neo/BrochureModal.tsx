@@ -44,7 +44,7 @@ export default function BrochureModal() {
             <div className="w-16 h-16 mx-auto rounded-full bg-[#F5EBE6] flex items-center justify-center text-[#A85D45]">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl font-serif text-[#10141E] font-medium">E-Brochure Ready</h3>
+            <h3 className="text-2xl font-serif text-[#10141E] font-medium">Brochure Ready</h3>
             <p className="text-[#5A6474] text-xs leading-relaxed max-w-xs mx-auto">
               Thank you, <span className="text-[#A85D45] font-semibold">{formData.name}</span>. The Neo Towers architectural docket and master plans have been unlocked.
             </p>
@@ -75,7 +75,7 @@ export default function BrochureModal() {
                 Download Neo Brochure
               </h3>
               <p className="text-xs text-[#5A6474] mt-1 max-w-sm mx-auto">
-                Access comprehensive architectural elevations, Club Neo specifications, Skydeck details & unit layouts.
+                Access comprehensive architectural elevations, Club Neo specifications, Skydeck details & unit layouts
               </p>
             </div>
 

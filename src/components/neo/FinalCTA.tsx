@@ -33,9 +33,9 @@ export default function FinalCTA() {
         <div className="max-w-4xl space-y-4 mb-12">
           <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-light text-[#10141E] leading-[1.05]">
             Your next address <br />
-            <span className="italic text-[#A85D45] font-normal">is already above you.</span>
+            <span className="text-[#A85D45] font-normal">is already above you</span>
           </h2>
-          <p className="text-lg sm:text-2xl font-serif italic text-[#5A6474] font-light pt-2">
+          <p className="text-lg sm:text-2xl font-serif text-[#5A6474] font-normal pt-2">
             Discover Neo Towers • Neopolis Kokapet Hyderabad
           </p>
         </div>

@@ -10,11 +10,11 @@ export default function ClubNeo() {
     {
       id: 'GROUND',
       name: 'Ground Level',
-      tagline: 'Grand Portico & Double-Height Atrium',
+      tagline: 'Grand Portico & Double Height Atrium',
       image: '/neo-assets/clubneo/clubneo-hero.jpg',
       facilities: [
         'Grand Welcome Lobby & 24/7 Concierge Desk',
-        'Valet Drop-off Zone & Foyer Water Feature',
+        'Valet Drop off Zone & Foyer Water Feature',
         'Private Residents Reception Lounge',
         'Secure Package Locker & Logistics Zone',
       ],
@@ -25,7 +25,7 @@ export default function ClubNeo() {
       tagline: 'Indoor Sports & Badminton Arena',
       image: '/neo-assets/clubneo/clubneo_LARGE.jpeg',
       facilities: [
-        'Dual Double-Height Badminton Courts with Teakwood Floors',
+        'Dual Double Height Badminton Courts with Teakwood Floors',
         'Squash Court with Viewing Gallery',
         'Table Tennis & Billiards Parlour',
         'Board Games & Chess Pavilion',
@@ -40,7 +40,7 @@ export default function ClubNeo() {
         'Technogym Equipped Advanced Fitness Center',
         'Dedicated Spinning & HIIT Studio',
         'Personal Trainer Consultation Suites',
-        'Post-Workout Hydrotherapy & Steam Rooms',
+        'Post Workout Hydrotherapy & Steam Rooms',
       ],
     },
     {
@@ -61,8 +61,8 @@ export default function ClubNeo() {
       tagline: 'Cinema & Cultural Pavilion',
       image: '/neo-assets/clubneo/thetre980.webp',
       facilities: [
-        '40-Seat Private Dolby Atmos Preview Theatre',
-        'Acoustically Treated Audio/Visual Screening Room',
+        '40 Seat Private Dolby Atmos Preview Theatre',
+        'Acoustically Treated Audio Visual Screening Room',
         'Art Gallery & Fine Arts Exhibition Foyer',
         'VIP Green Room & Dressing Suites',
       ],
@@ -73,10 +73,10 @@ export default function ClubNeo() {
       tagline: 'Co-Working & Knowledge Center',
       image: '/neo-assets/clubneo/e-learing.webp',
       facilities: [
-        'High-Speed Plug & Play Smart Workstations',
+        'High Speed Plug & Play Smart Workstations',
         'Executive Conference Room with Video Conferencing',
         'E-Library & Digital Research Carrels',
-        'Espresso & High-Tea Coffee Bar',
+        'Espresso & High Tea Coffee Bar',
       ],
     },
     {
@@ -85,8 +85,8 @@ export default function ClubNeo() {
       tagline: 'Grand Banquets & Social Ballroom',
       image: '/neo-assets/clubneo/skyway.webp',
       facilities: [
-        'Double-Height Grand Banquet Hall (Capacity 250+)',
-        'Pre-Function Lounge & Spillover Terrace',
+        'Double Height Grand Banquet Hall (Capacity 250+)',
+        'Pre Function Lounge & Spillover Terrace',
         'Full Commercial Catering Kitchen',
         'Bridal Suite & Private Dressing Room',
       ],
@@ -100,7 +100,7 @@ export default function ClubNeo() {
         'Temperature Controlled Horizon Infinity Pool',
         'Kids Shallow Splash Pool with Fountain Jets',
         'Poolside Cabanas & Sun Loungers',
-        'Open-Air Starlight BBQ & Bar Lounge',
+        'Open Air Starlight BBQ & Bar Lounge',
       ],
     },
   ]
@@ -120,7 +120,7 @@ export default function ClubNeo() {
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
             CLUB NEO <br />
-            <span className="italic text-[#A85D45] font-normal">Suspended between sky & water.</span>
+            <span className="text-[#A85D45] font-normal">Suspended between sky & water</span>
           </h2>
           <p className="text-xs sm:text-sm text-[#5A6474] max-w-xl mx-auto pt-1 sm:pt-2">
             A landmark of leisure designed for experiences that go beyond the everyday. Spanning multiple dedicated levels of unprecedented luxury.

@@ -11,31 +11,31 @@ export default function LifeAtNeo() {
       title: 'Grand Entrance Fountain',
       subtitle: 'A Majestic Sense of Arrival',
       image: '/neo-assets/lifeatneo/features/entrance_fountain.jpg',
-      desc: 'Cascading water installations set amid sculpted greenery, creating an awe-inspiring first impression for residents and guests.',
+      desc: 'Cascading water installations set amid sculpted greenery, creating an awe inspiring first impression for residents and guests.',
     },
     {
-      title: 'Open-Air Amphitheatre',
+      title: 'Open Air Amphitheatre',
       subtitle: 'Culture Under the Stars',
       image: '/neo-assets/lifeatneo/features/amphitheater.jpg',
       desc: 'Tiered acoustic amphitheatre designed for musical evenings, community performances, and cinema screenings.',
     },
     {
       title: 'Kids Play Haven',
-      subtitle: 'Safe, Wonder-Filled Discovery',
+      subtitle: 'Safe, Wonder Filled Discovery',
       image: '/neo-assets/lifeatneo/features/play_park.jpg',
-      desc: 'Zero-vehicle secured terrain with rubberized flooring, adventure trails, and sensory interactive play equipment.',
+      desc: 'Zero vehicle secured terrain with rubberized flooring, adventure trails, and sensory interactive play equipment.',
     },
     {
       title: 'Dedicated Pet Park',
-      subtitle: 'Freedom for Four-Legged Family',
+      subtitle: 'Freedom for Four Legged Family',
       image: '/neo-assets/lifeatneo/features/pet_park.jpg',
       desc: 'Specially fenced obstacle zones, agility tracks, and sanitization stations designed specifically for companion pets.',
     },
     {
       title: 'Grand Reception Lobby',
-      subtitle: 'Double-Height Architectural Welcome',
+      subtitle: 'Double Height Architectural Welcome',
       image: '/neo-assets/lifeatneo/features/reception.png',
-      desc: 'Curated Italian marble lobbies with 5-star concierge desks, private waiting lounges, and high-speed elevator access.',
+      desc: 'Curated Italian marble lobbies with 5 star concierge desks, private waiting lounges, and high speed elevator access.',
     },
   ]
 
@@ -58,13 +58,13 @@ export default function LifeAtNeo() {
             </span>
             <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
               Life, <br />
-              <span className="italic text-[#A85D45] font-normal">elevated.</span>
+              <span className="text-[#A85D45] font-normal">elevated</span>
             </h2>
           </div>
 
           <div className="lg:col-span-6 space-y-4 lg:pl-8 lg:border-l border-black/10">
             <p className="text-base sm:text-lg text-[#10141E]/90 font-serif leading-relaxed">
-              Every layer of Neo is designed to make everyday living feel extraordinary — from landscaped gardens at ground level to private experiences high above the city.
+              Every layer of Neo is designed to make everyday living feel extraordinary, from landscaped gardens at ground level to private experiences high above the city.
             </p>
             <div className="flex items-center gap-4 pt-2">
               <span className="text-xs uppercase tracking-[0.2em] text-[#A85D45] font-semibold">

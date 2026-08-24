@@ -7,37 +7,37 @@ export default function ClubExperience() {
   const experiences = [
     {
       title: 'Preview Theatre',
-      tagline: 'Blockbuster experiences, at home.',
+      tagline: 'Blockbuster experiences, at home',
       image: '/neo-assets/clubneo/thetre980.webp',
       desc: 'Private cinematic acoustic salon for movie nights, sports screenings and family celebrations.',
       icon: Film,
     },
     {
       title: 'Senior Citizens Lounge',
-      tagline: 'Live young. Everyday.',
+      tagline: 'Live young, everyday',
       image: '/neo-assets/clubneo/senior_citizen.webp',
-      desc: 'Serene, light-filled relaxation room with ergonomic loungers, tea bar and quiet reading zones.',
+      desc: 'Serene, light filled relaxation room with ergonomic loungers, tea bar and quiet reading zones.',
       icon: Heart,
     },
     {
       title: 'Learning Centre',
-      tagline: 'Focus. Reflect. Rise.',
+      tagline: 'Focus, reflect, rise',
       image: '/neo-assets/clubneo/e-learing.webp',
-      desc: 'Modern digital study pods and high-speed co-learning spaces for scholars and professionals.',
+      desc: 'Modern digital study pods and high speed co learning spaces for scholars and professionals.',
       icon: BookOpen,
     },
     {
       title: 'Infinity Pool',
-      tagline: 'Float above the world.',
+      tagline: 'Float above the world',
       image: '/neo-assets/clubneo/infinity-pool.png',
-      desc: 'Suspended temperature-controlled infinity edge merging seamlessly with the Hyderabad sky.',
+      desc: 'Suspended temperature controlled infinity edge merging seamlessly with the Hyderabad sky.',
       icon: Waves,
     },
     {
       title: 'Fitness Sanctuary',
-      tagline: 'Train beyond limits.',
+      tagline: 'Train beyond limits',
       image: '/neo-assets/clubneo/gym.jpg',
-      desc: 'Precision fitness floor equipped with world-class resistance machines and personal coaching bays.',
+      desc: 'Precision fitness floor equipped with world class resistance machines and personal coaching bays.',
       icon: Dumbbell,
     },
   ]
@@ -53,7 +53,7 @@ export default function ClubExperience() {
             </span>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-light text-[#10141E] leading-tight">
               Curated club <br />
-              <span className="italic text-[#A85D45] font-normal">experiences.</span>
+              <span className="text-[#A85D45] font-normal">experiences</span>
             </h2>
           </div>
           <p className="text-sm text-[#5A6474] max-w-md">
@@ -90,7 +90,7 @@ export default function ClubExperience() {
                     <h3 className="text-lg font-serif text-[#10141E] group-hover:text-[#A85D45] transition-colors font-medium">
                       {exp.title}
                     </h3>
-                    <p className="text-xs italic font-serif text-[#A85D45] mt-1 font-medium">
+                    <p className="text-xs font-serif text-[#A85D45] mt-1 font-medium">
                       &ldquo;{exp.tagline}&rdquo;
                     </p>
                   </div>
