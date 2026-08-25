@@ -1,13 +1,13 @@
 'use client'
 import React, { useState, useRef } from 'react'
 import {
-  Smartphone,
-  Sliders,
+  TabletSmartphone,
+  SlidersHorizontal,
   Mic,
-  Calendar,
+  Clock,
   SunMedium,
-  Cpu,
-  Wifi,
+  Network,
+  Globe,
   ShieldCheck,
   ChevronLeft,
   ChevronRight,
@@ -19,13 +19,13 @@ export default function SmartHomes() {
 
   const features = [
     {
-      icon: Smartphone,
+      icon: TabletSmartphone,
       title: 'Smart Control',
       desc: 'Control lighting channels, ceiling fans, motorized drapery and climate scenes remotely with zero latency.',
       status: 'App Synced',
     },
     {
-      icon: Sliders,
+      icon: SlidersHorizontal,
       title: 'One Touch Scenes',
       desc: 'Create and activate custom ambience presets (Cinema, Dinner, Morning Wake up, Away) with a single tap.',
       status: 'Custom Presets',
@@ -37,7 +37,7 @@ export default function SmartHomes() {
       status: 'Voice Activated',
     },
     {
-      icon: Calendar,
+      icon: Clock,
       title: 'Smart Scheduling',
       desc: 'Automate morning geothermal geysers, evening balcony ambient glows and automated climate control cycles.',
       status: 'Auto Scheduled',
@@ -49,13 +49,13 @@ export default function SmartHomes() {
       status: 'Circadian AI',
     },
     {
-      icon: Cpu,
+      icon: Network,
       title: 'Future Ready Architecture',
       desc: 'Built on modular IoT protocols, fiber to the home backbone, and structured cabling prepared for future updates.',
       status: 'Modular Bus',
     },
     {
-      icon: Wifi,
+      icon: Globe,
       title: 'Global Remote Access',
       desc: 'Monitor door locks, security cameras, access authorizations and power consumption from anywhere across the globe.',
       status: '256 Bit Encrypted',
