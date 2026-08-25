@@ -33,8 +33,8 @@ export default function BrochureModal() {
 
   const triggerFileDownload = () => {
     const link = document.createElement('a')
-    link.href = '/neo-assets/Neo%20Main%20Brochure.pdf'
-    link.download = 'Neo_Towers_Main_Brochure.pdf'
+    link.href = '/Neo%20Main%20Brochure.pdf'
+    link.download = 'Neo Main Brochure.pdf'
     link.target = '_blank'
     document.body.appendChild(link)
     link.click()
@@ -112,13 +112,16 @@ export default function BrochureModal() {
               Thank you, <span className="text-[#A85D45] font-semibold">{formData.name}</span>. Your download has started automatically.
             </p>
             <div className="pt-2 flex flex-col gap-2.5">
-              <button
-                onClick={triggerFileDownload}
+              <a
+                href="/Neo%20Main%20Brochure.pdf"
+                download="Neo Main Brochure.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full py-3 rounded-lg bg-[#FAF7F2] hover:bg-[#F5EBE6] text-[#A85D45] border border-[#A85D45]/25 font-semibold text-xs uppercase tracking-[0.18em] flex items-center justify-center gap-2 transition-colors"
               >
                 <ArrowDownToLine className="w-4 h-4" />
                 Click Here If Download Didn&apos;t Start
-              </button>
+              </a>
               <a
                 href="#residences"
                 onClick={handleReset}
