@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { useNeoModal } from './context/NeoModalContext'
-import { X, CheckCircle2, Download, FileText, Lock } from 'lucide-react'
+import { X, CheckCircle2, Download, FileText, Lock, User, Phone, Mail, ArrowDownToLine } from 'lucide-react'
 
 export default function BrochureModal() {
   const { isBrochureOpen, closeBrochure } = useNeoModal()
@@ -29,6 +29,16 @@ export default function BrochureModal() {
     if (!/^[0-9]$/.test(e.key)) {
       e.preventDefault()
     }
+  }
+
+  const triggerFileDownload = () => {
+    const link = document.createElement('a')
+    link.href = '/neo-assets/neo-brochure.pdf'
+    link.download = 'Neo_Towers_Official_Brochure.pdf'
+    link.target = '_blank'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   const handleDownload = async (e: React.FormEvent) => {
@@ -66,6 +76,8 @@ export default function BrochureModal() {
       // Continue to show success state
     }
 
+    // Trigger instant automatic download of brochure
+    triggerFileDownload()
     setDownloaded(true)
   }
 
@@ -95,11 +107,18 @@ export default function BrochureModal() {
             <div className="w-16 h-16 mx-auto rounded-full bg-[#F5EBE6] flex items-center justify-center text-[#A85D45]">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl font-serif text-[#10141E] font-medium">Brochure Ready</h3>
+            <h3 className="text-2xl font-serif text-[#10141E] font-medium">Brochure Download Started</h3>
             <p className="text-[#5A6474] text-xs leading-relaxed max-w-xs mx-auto">
-              Thank you, <span className="text-[#A85D45] font-semibold">{formData.name}</span>. The Neo Towers architectural docket and master plans have been unlocked.
+              Thank you, <span className="text-[#A85D45] font-semibold">{formData.name}</span>. Your download has started automatically.
             </p>
-            <div className="pt-3 flex flex-col gap-2.5">
+            <div className="pt-2 flex flex-col gap-2.5">
+              <button
+                onClick={triggerFileDownload}
+                className="w-full py-3 rounded-lg bg-[#FAF7F2] hover:bg-[#F5EBE6] text-[#A85D45] border border-[#A85D45]/25 font-semibold text-xs uppercase tracking-[0.18em] flex items-center justify-center gap-2 transition-colors"
+              >
+                <ArrowDownToLine className="w-4 h-4" />
+                Click Here If Download Didn&apos;t Start
+              </button>
               <a
                 href="#residences"
                 onClick={handleReset}
@@ -110,7 +129,7 @@ export default function BrochureModal() {
               </a>
               <button
                 onClick={handleReset}
-                className="w-full py-2.5 text-xs text-[#5A6474] hover:text-[#10141E] transition-colors"
+                className="w-full py-2 text-xs text-[#5A6474] hover:text-[#10141E] transition-colors"
               >
                 Close
               </button>
@@ -141,62 +160,71 @@ export default function BrochureModal() {
                 <label className="block text-[11px] uppercase tracking-wider text-[#5A6474] mb-1.5 font-medium">
                   Full Name *
                 </label>
-                <input
-                  type="text"
-                  required
-                  placeholder="Enter your full name"
-                  value={formData.name}
-                  onKeyDown={handleNameKeyDown}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      name: e.target.value.replace(/[^a-zA-Z\s]/g, ''),
-                    })
-                  }
-                  pattern="^[A-Za-z\s]{2,50}$"
-                  title="Please enter only letters and spaces (min 2 characters)"
-                  className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg px-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors"
-                />
+                <div className="relative">
+                  <User className="w-4 h-4 text-[#8C97A7] absolute left-3.5 top-1/2 -translate-y-1/2" />
+                  <input
+                    type="text"
+                    required
+                    placeholder="Enter your full name"
+                    value={formData.name}
+                    onKeyDown={handleNameKeyDown}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        name: e.target.value.replace(/[^a-zA-Z\s]/g, ''),
+                      })
+                    }
+                    pattern="^[A-Za-z\s]{2,50}$"
+                    title="Please enter only letters and spaces (min 2 characters)"
+                    className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg pl-10 pr-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors"
+                  />
+                </div>
               </div>
 
               <div>
                 <label className="block text-[11px] uppercase tracking-wider text-[#5A6474] mb-1.5 font-medium">
                   Phone Number *
                 </label>
-                <input
-                  type="tel"
-                  inputMode="numeric"
-                  required
-                  maxLength={10}
-                  placeholder="XXXXX XXXXX"
-                  value={formData.phone}
-                  onKeyDown={handlePhoneKeyDown}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      phone: e.target.value.replace(/\D/g, '').slice(0, 10),
-                    })
-                  }
-                  pattern="[0-9]{10}"
-                  title="Please enter a valid 10-digit mobile number"
-                  className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg px-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors font-mono"
-                />
+                <div className="relative">
+                  <Phone className="w-4 h-4 text-[#8C97A7] absolute left-3.5 top-1/2 -translate-y-1/2" />
+                  <input
+                    type="tel"
+                    inputMode="numeric"
+                    required
+                    maxLength={10}
+                    placeholder="XXXXX XXXXX"
+                    value={formData.phone}
+                    onKeyDown={handlePhoneKeyDown}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        phone: e.target.value.replace(/\D/g, '').slice(0, 10),
+                      })
+                    }
+                    pattern="[0-9]{10}"
+                    title="Please enter a valid 10-digit mobile number"
+                    className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg pl-10 pr-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors font-mono"
+                  />
+                </div>
               </div>
 
               <div>
                 <label className="block text-[11px] uppercase tracking-wider text-[#5A6474] mb-1.5 font-medium">
                   Email Address *
                 </label>
-                <input
-                  type="email"
-                  required
-                  placeholder="name@domain.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value.trim() })}
-                  pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
-                  title="Please enter a valid email address (e.g. name@domain.com)"
-                  className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg px-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors"
-                />
+                <div className="relative">
+                  <Mail className="w-4 h-4 text-[#8C97A7] absolute left-3.5 top-1/2 -translate-y-1/2" />
+                  <input
+                    type="email"
+                    required
+                    placeholder="name@domain.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value.trim() })}
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                    title="Please enter a valid email address (e.g. name@domain.com)"
+                    className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg pl-10 pr-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors"
+                  />
+                </div>
               </div>
 
               <div className="pt-2">
