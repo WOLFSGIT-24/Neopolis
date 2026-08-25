@@ -82,7 +82,7 @@ export default function ClubNeo() {
       id: '6TH',
       name: '6th Floor',
       tagline: 'Yoga, Meditation & Grand Party Halls',
-      image: '/neo-assets/clubneo/clubneo_LARGE.jpeg',
+      image: '/neo-assets/clubneo/yoga-meditation-hall.jpg',
       facilities: [
         'Yoga Hall',
         'Party Halls (2)',
