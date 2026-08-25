@@ -121,7 +121,7 @@ export default function Sustainability() {
                     <div className="w-10 h-10 rounded-xl bg-[#F5EBE6] group-hover:bg-[#A85D45] group-hover:text-white flex items-center justify-center text-[#A85D45] transition-colors">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-xs font-mono text-[#10141E] font-medium">
+                    <span className="text-[10px] sm:text-[11px] font-mono text-[#10141E] font-medium px-2.5 py-0.5 rounded-full border border-black/20">
                       {f.badge}
                     </span>
                   </div>
