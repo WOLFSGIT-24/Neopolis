@@ -54,7 +54,7 @@ export default function Sustainability() {
       icon: Leaf,
       title: 'Responsible Materials',
       desc: 'Locally procured high albedo roof pavers, AAC blocks and fly ash based cement mixes.',
-      badge: 'Eco-Sourced',
+      badge: 'Eco Sourced',
     },
     {
       icon: CheckCircle2,
@@ -121,7 +121,7 @@ export default function Sustainability() {
                     <div className="w-10 h-10 rounded-xl bg-[#F5EBE6] group-hover:bg-[#A85D45] group-hover:text-white flex items-center justify-center text-[#A85D45] transition-colors">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[10px] font-mono text-emerald-700 font-semibold px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200">
+                    <span className="text-xs font-mono text-[#10141E] font-medium">
                       {f.badge}
                     </span>
                   </div>
