@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { Sparkles, Moon, Sun, Wind, Eye, Coffee, Waves, ArrowRight } from 'lucide-react'
+import { Compass, Moon, Sun, Wind, Eye, Coffee, Waves, ArrowRight } from 'lucide-react'
 
 export default function Skydeck() {
   const [activeItem, setActiveItem] = useState(0)
@@ -57,7 +57,7 @@ export default function Skydeck() {
         {/* Editorial Heading */}
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#A85D45]/30 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#A85D45]" />
+            <Compass className="w-3.5 h-3.5 text-[#A85D45]" />
             <span className="text-[11px] uppercase tracking-[0.3em] text-[#A85D45] font-semibold">
               Levels 58 & 59 • The Stratosphere Layer
             </span>

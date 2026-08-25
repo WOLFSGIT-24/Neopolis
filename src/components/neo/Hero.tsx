@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { useNeoModal } from "./context/NeoModalContext";
-import { ArrowDown, Download, Sparkles, ChevronDown } from "lucide-react";
+import { Download, ChevronDown } from "lucide-react";
 
 export default function Hero() {
   const { openEnquiry, openBrochure } = useNeoModal();

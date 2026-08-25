@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { useNeoModal } from './context/NeoModalContext'
-import { PhoneCall, Sparkles } from 'lucide-react'
+import { PhoneCall, Calendar } from 'lucide-react'
 
 export default function MobileBottomBar() {
   const { openEnquiry } = useNeoModal()
@@ -22,7 +22,7 @@ export default function MobileBottomBar() {
         onClick={() => openEnquiry('Mobile Sticky Bar')}
         className="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#C98D78] via-[#B8735C] to-[#A85D45] text-white text-xs font-bold uppercase tracking-[0.18em] flex items-center justify-center gap-1.5 active:scale-95 transition-all shadow-lg shadow-[#A85D45]/25"
       >
-        <Sparkles className="w-4 h-4" />
+        <Calendar className="w-4 h-4" />
         <span>Enquire</span>
       </button>
     </div>

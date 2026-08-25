@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { useNeoModal } from './context/NeoModalContext'
-import { Download, PhoneCall, Calendar, ShieldCheck, Sparkles } from 'lucide-react'
+import { Download, PhoneCall, Calendar, ShieldCheck, Award } from 'lucide-react'
 
 export default function FinalCTA() {
   const { openEnquiry, openBrochure } = useNeoModal()
@@ -37,7 +37,7 @@ export default function FinalCTA() {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 text-center flex flex-col items-center">
         {/* Tagline Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 border border-white/20 backdrop-blur-md mb-8 animate-fadeIn shadow-lg">
-          <Sparkles className="w-3.5 h-3.5 text-[#E8C5B8]" />
+          <Award className="w-3.5 h-3.5 text-[#E8C5B8]" />
           <span className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-[#E8C5B8] font-mono font-medium">
             An Unrepeatable Legacy
           </span>
