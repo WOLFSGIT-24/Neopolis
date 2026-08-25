@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 
 const GT = "'GT Ultra Fine', Georgia, serif"
 const LORA = "'Lora', Georgia, serif"
-const BROCHURE_URL = 'https://cef78c45-cb7c-493a-bb0d-466802e011fc.usrfiles.com/ugd/cef78c_e2918df63b764fc7b6473c87b34dcbcb.pdf'
+const BROCHURE_URL = '/neo-assets/Neo%20Main%20Brochure.pdf'
 const REDIRECT_DELAY = 5
 
 export default function ThankYouPage() {
@@ -40,7 +40,7 @@ export default function ThankYouPage() {
           Redirecting in {countdown}s
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center', alignItems: 'center' }}>
-          <a href={BROCHURE_URL} target="_blank" rel="noopener noreferrer" download="Runwal-Raaya-Brochure.pdf"
+          <a href={BROCHURE_URL} target="_blank" rel="noopener noreferrer" download="Neo_Towers_Main_Brochure.pdf"
             style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '0.9rem 2.2rem', background: '#C8A14A', color: '#2B2725', fontFamily: LORA, fontSize: '0.62rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase' as const, textDecoration: 'none', border: '1px solid #C8A14A', transition: 'all 0.3s ease' }}
             onMouseEnter={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#C8A14A' }}
             onMouseLeave={e => { e.currentTarget.style.background = '#C8A14A'; e.currentTarget.style.color = '#2B2725' }}>
