@@ -6,6 +6,7 @@ import { X, CheckCircle2, Phone, Mail, User, Clock, Building2 } from 'lucide-rea
 export default function EnquiryModal() {
   const { isEnquiryOpen, closeEnquiry, enquirySource } = useNeoModal()
   const [submitted, setSubmitted] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -16,13 +17,47 @@ export default function EnquiryModal() {
 
   if (!isEnquiryOpen) return null
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setErrorMessage('')
+
+    // Strict validation
+    if (formData.name.trim().length < 2) {
+      setErrorMessage('Please enter a valid name (at least 2 letters).')
+      return
+    }
+
+    if (formData.phone.length !== 10) {
+      setErrorMessage('Please enter a valid 10-digit mobile number.')
+      return
+    }
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+    if (formData.email && !emailRegex.test(formData.email)) {
+      setErrorMessage('Please enter a valid email address.')
+      return
+    }
+
+    try {
+      await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: formData.name,
+          phoneNumber: formData.phone,
+          emailAddress: formData.email || 'not-provided@neotowers.in',
+        }),
+      }).catch(() => {})
+    } catch {
+      // Continue to show success state
+    }
+
     setSubmitted(true)
   }
 
   const handleReset = () => {
     setSubmitted(false)
+    setErrorMessage('')
     setFormData({
       name: '',
       phone: '',
@@ -41,7 +76,7 @@ export default function EnquiryModal() {
       >
         {/* Close Button */}
         <button
-          onClick={closeEnquiry}
+          onClick={handleReset}
           aria-label="Close modal"
           className="absolute top-4 right-4 text-[#5A6474] hover:text-[#10141E] p-2 rounded-full hover:bg-black/5 transition-colors"
         >
@@ -55,7 +90,7 @@ export default function EnquiryModal() {
             </div>
             <h3 className="text-2xl sm:text-3xl font-serif text-[#10141E] font-medium">Thank You</h3>
             <p className="text-[#5A6474] text-sm max-w-xs mx-auto leading-relaxed">
-              Your inquiry for <span className="text-[#A85D45] font-semibold">{enquirySource}</span> has been received. Our luxury property advisor will connect with you shortly.
+              Your inquiry for <span className="text-[#A85D45] font-semibold">{enquirySource}</span> has been received. Our luxury property advisor will connect with you via +91 {formData.phone} shortly.
             </p>
             <div className="pt-4">
               <button
@@ -81,6 +116,12 @@ export default function EnquiryModal() {
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
+              {errorMessage && (
+                <div className="p-3 rounded-lg bg-red-50 border border-red-200 text-xs text-red-700 font-medium">
+                  {errorMessage}
+                </div>
+              )}
+
               <div>
                 <label className="block text-[11px] uppercase tracking-wider text-[#5A6474] mb-1.5 font-medium">
                   Full Name *
@@ -90,9 +131,16 @@ export default function EnquiryModal() {
                   <input
                     type="text"
                     required
-                    placeholder="Enter your name"
+                    placeholder="Enter your full name"
                     value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        name: e.target.value.replace(/[^a-zA-Z\s]/g, ''),
+                      })
+                    }
+                    pattern="^[A-Za-z\s]{2,50}$"
+                    title="Please enter only letters and spaces (min 2 characters)"
                     className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg pl-10 pr-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors"
                   />
                 </div>
@@ -107,10 +155,19 @@ export default function EnquiryModal() {
                     <Phone className="w-4 h-4 text-[#8C97A7] absolute left-3.5 top-1/2 -translate-y-1/2" />
                     <input
                       type="tel"
+                      inputMode="numeric"
                       required
-                      placeholder="+91 99969 99720"
+                      maxLength={10}
+                      placeholder="10-digit mobile number"
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          phone: e.target.value.replace(/\D/g, '').slice(0, 10),
+                        })
+                      }
+                      pattern="[0-9]{10}"
+                      title="Please enter a valid 10-digit mobile number"
                       className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg pl-10 pr-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors"
                     />
                   </div>
@@ -126,7 +183,9 @@ export default function EnquiryModal() {
                       type="email"
                       placeholder="name@domain.com"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value.trim() })}
+                      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                      title="Please enter a valid email address (e.g. name@domain.com)"
                       className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg pl-10 pr-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors"
                     />
                   </div>

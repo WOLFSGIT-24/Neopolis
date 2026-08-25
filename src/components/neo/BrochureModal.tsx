@@ -6,6 +6,7 @@ import { X, CheckCircle2, Download, FileText, Lock } from 'lucide-react'
 export default function BrochureModal() {
   const { isBrochureOpen, closeBrochure } = useNeoModal()
   const [downloaded, setDownloaded] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -14,13 +15,47 @@ export default function BrochureModal() {
 
   if (!isBrochureOpen) return null
 
-  const handleDownload = (e: React.FormEvent) => {
+  const handleDownload = async (e: React.FormEvent) => {
     e.preventDefault()
+    setErrorMessage('')
+
+    // Strict validation
+    if (formData.name.trim().length < 2) {
+      setErrorMessage('Please enter a valid name (at least 2 letters).')
+      return
+    }
+
+    if (formData.phone.length !== 10) {
+      setErrorMessage('Please enter a valid 10-digit mobile number.')
+      return
+    }
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+    if (!emailRegex.test(formData.email)) {
+      setErrorMessage('Please enter a valid email address.')
+      return
+    }
+
+    try {
+      await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: formData.name,
+          phoneNumber: formData.phone,
+          emailAddress: formData.email,
+        }),
+      }).catch(() => {})
+    } catch {
+      // Continue to show success state
+    }
+
     setDownloaded(true)
   }
 
   const handleReset = () => {
     setDownloaded(false)
+    setErrorMessage('')
     setFormData({ name: '', phone: '', email: '' })
     closeBrochure()
   }
@@ -32,7 +67,7 @@ export default function BrochureModal() {
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          onClick={closeBrochure}
+          onClick={handleReset}
           aria-label="Close modal"
           className="absolute top-4 right-4 text-[#5A6474] hover:text-[#10141E] p-2 rounded-full hover:bg-black/5 transition-colors"
         >
@@ -80,6 +115,12 @@ export default function BrochureModal() {
             </div>
 
             <form onSubmit={handleDownload} className="space-y-4">
+              {errorMessage && (
+                <div className="p-3 rounded-lg bg-red-50 border border-red-200 text-xs text-red-700 font-medium">
+                  {errorMessage}
+                </div>
+              )}
+
               <div>
                 <label className="block text-[11px] uppercase tracking-wider text-[#5A6474] mb-1.5 font-medium">
                   Full Name *
@@ -87,9 +128,16 @@ export default function BrochureModal() {
                 <input
                   type="text"
                   required
-                  placeholder="Enter your name"
+                  placeholder="Enter your full name"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      name: e.target.value.replace(/[^a-zA-Z\s]/g, ''),
+                    })
+                  }
+                  pattern="^[A-Za-z\s]{2,50}$"
+                  title="Please enter only letters and spaces (min 2 characters)"
                   className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg px-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors"
                 />
               </div>
@@ -100,10 +148,19 @@ export default function BrochureModal() {
                 </label>
                 <input
                   type="tel"
+                  inputMode="numeric"
                   required
-                  placeholder="+91 99969 99720"
+                  maxLength={10}
+                  placeholder="10-digit mobile number"
                   value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      phone: e.target.value.replace(/\D/g, '').slice(0, 10),
+                    })
+                  }
+                  pattern="[0-9]{10}"
+                  title="Please enter a valid 10-digit mobile number"
                   className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg px-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors"
                 />
               </div>
@@ -117,7 +174,9 @@ export default function BrochureModal() {
                   required
                   placeholder="name@domain.com"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value.trim() })}
+                  pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                  title="Please enter a valid email address (e.g. name@domain.com)"
                   className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg px-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors"
                 />
               </div>
