@@ -71,7 +71,7 @@ export default function ClubNeo() {
       id: '5TH',
       name: '5th Floor',
       tagline: 'Executive Suites & Exclusive Guest Rooms',
-      image: '/neo-assets/clubneo/skyway.webp',
+      image: '/neo-assets/clubneo/executive-suites.png',
       facilities: [
         'Lounge',
         'Guest Rooms (6)',
