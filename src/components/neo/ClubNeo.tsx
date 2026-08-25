@@ -203,14 +203,14 @@ export default function ClubNeo() {
             </div>
 
             {/* Floor Facilities Grid */}
-            <div className="p-4 sm:p-6 lg:p-8 rounded-2xl bg-white border border-[#A85D45]/20 shadow-md">
-              <h4 className="text-[11px] sm:text-xs uppercase tracking-[0.2em] text-[#A85D45] font-semibold mb-4 text-center">
+            <div className="p-5 sm:p-6 lg:p-8 rounded-2xl bg-white border border-[#A85D45]/20 shadow-md">
+              <h4 className="text-[11px] sm:text-xs uppercase tracking-[0.2em] text-[#A85D45] font-semibold mb-5 text-center">
                 Level Inclusions & Amenities
               </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-left">
+              <div className="max-w-lg mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-8 sm:gap-x-12 gap-y-3">
                 {current.facilities.map((fac, idx) => (
-                  <div key={idx} className="flex items-start justify-start gap-2.5 text-xs sm:text-sm text-[#10141E] text-left">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#A85D45] shrink-0 mt-1.5" />
+                  <div key={idx} className="flex items-center justify-start gap-2.5 text-xs sm:text-sm text-[#10141E] text-left">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#A85D45] shrink-0" />
                     <span className="text-left leading-snug">{fac}</span>
                   </div>
                 ))}
