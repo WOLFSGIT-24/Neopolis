@@ -86,8 +86,8 @@ export default function PriceSection() {
         </div>
 
         {/* Clean Luxury Action Strip */}
-        <div className="p-6 sm:p-7 rounded-2xl bg-white border border-[#A85D45]/20 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
-          <div className="space-y-1 text-center sm:text-left">
+        <div className="p-5 sm:p-7 rounded-2xl bg-white border border-[#A85D45]/20 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
+          <div className="space-y-1 text-center sm:text-left w-full sm:w-auto">
             <h4 className="text-sm font-serif text-[#10141E] font-semibold">
               Looking for full pricing breakdown & unit plans?
             </h4>
@@ -96,10 +96,10 @@ export default function PriceSection() {
             </p>
           </div>
 
-          <div className="flex items-center gap-3 flex-wrap justify-center">
+          <div className="flex flex-col sm:flex-row items-center gap-2.5 sm:gap-3 w-full sm:w-auto justify-center">
             <button
               onClick={openTerms}
-              className="px-4 py-2.5 rounded-xl bg-[#FAF7F2] hover:bg-[#F5EBE6] text-xs text-[#A85D45] border border-[#A85D45]/20 transition-colors flex items-center gap-1.5 font-semibold"
+              className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-[#FAF7F2] hover:bg-[#F5EBE6] text-xs text-[#A85D45] border border-[#A85D45]/20 transition-colors flex items-center justify-center gap-1.5 font-semibold"
             >
               <FileText className="w-3.5 h-3.5 text-[#A85D45]" />
               Pricing Terms & Taxes
@@ -107,7 +107,7 @@ export default function PriceSection() {
 
             <button
               onClick={openBrochure}
-              className="px-5 py-2.5 rounded-xl bg-white hover:bg-[#A85D45] hover:text-white text-xs uppercase tracking-wider text-[#A85D45] border border-[#A85D45]/30 transition-all flex items-center gap-1.5 font-semibold"
+              className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-white hover:bg-[#A85D45] hover:text-white text-xs uppercase tracking-wider text-[#A85D45] border border-[#A85D45]/30 transition-all flex items-center justify-center gap-1.5 font-semibold"
             >
               <Download className="w-3.5 h-3.5" />
               Download Price Sheet
@@ -115,7 +115,7 @@ export default function PriceSection() {
 
             <button
               onClick={() => openEnquiry('Price Section Consultation')}
-              className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#C98D78] via-[#B8735C] to-[#A85D45] text-white text-xs uppercase tracking-wider font-semibold hover:opacity-95 transition-colors shadow-md"
+              className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#C98D78] via-[#B8735C] to-[#A85D45] text-white text-xs uppercase tracking-wider font-semibold hover:opacity-95 transition-colors shadow-md text-center"
             >
               Enquire Pricing
             </button>

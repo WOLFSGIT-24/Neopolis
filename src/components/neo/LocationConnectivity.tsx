@@ -70,16 +70,16 @@ export default function LocationConnectivity() {
             </div>
 
             {/* Bottom info banner */}
-            <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-white/95 backdrop-blur-md border border-[#A85D45]/20 flex items-center justify-between text-xs shadow-lg">
+            <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 p-2.5 sm:p-3 rounded-xl bg-white/95 backdrop-blur-md border border-[#A85D45]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2 text-[11px] sm:text-xs shadow-lg">
               <div className="flex items-center gap-2 text-[#10141E]">
-                <MapPin className="w-4 h-4 text-[#A85D45]" />
-                <span className="font-medium">Plot No. 11, Neopolis, Kokapet, Hyderabad</span>
+                <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#A85D45] shrink-0" />
+                <span className="font-medium truncate">Plot No. 11, Neopolis, Kokapet, Hyderabad</span>
               </div>
               <a
                 href="https://maps.google.com/?q=Neopolis+Kokapet+Hyderabad"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] text-[#A85D45] hover:underline flex items-center gap-1 font-semibold"
+                className="text-[11px] text-[#A85D45] hover:underline flex items-center gap-1 font-semibold self-end sm:self-auto shrink-0"
               >
                 Open Maps <ExternalLink className="w-3 h-3" />
               </a>

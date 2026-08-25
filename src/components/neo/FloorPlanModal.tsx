@@ -21,44 +21,44 @@ export default function FloorPlanModal() {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-[#A85D45]/15 bg-[#FAF7F2]">
-          <div>
-            <span className="text-[11px] uppercase tracking-[0.2em] text-[#A85D45] font-semibold">
+        <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-[#A85D45]/15 bg-[#FAF7F2]">
+          <div className="max-w-[65%] sm:max-w-none">
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-[#A85D45] font-semibold block">
               {selectedFloorPlan.tower} • {selectedFloorPlan.unit}
             </span>
-            <h3 className="text-xl sm:text-2xl font-serif text-[#10141E] font-medium">
+            <h3 className="text-sm sm:text-2xl font-serif text-[#10141E] font-medium truncate">
               {selectedFloorPlan.title}
             </h3>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2">
             <button
               onClick={handleZoomIn}
               title="Zoom In"
-              className="p-2 rounded-lg bg-white hover:bg-[#F5EBE6] text-[#10141E] border border-[#A85D45]/20 transition-colors shadow-sm"
+              className="p-1.5 sm:p-2 rounded-lg bg-white hover:bg-[#F5EBE6] text-[#10141E] border border-[#A85D45]/20 transition-colors shadow-sm"
             >
-              <ZoomIn className="w-4 h-4" />
+              <ZoomIn className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
             <button
               onClick={handleZoomOut}
               title="Zoom Out"
-              className="p-2 rounded-lg bg-white hover:bg-[#F5EBE6] text-[#10141E] border border-[#A85D45]/20 transition-colors shadow-sm"
+              className="p-1.5 sm:p-2 rounded-lg bg-white hover:bg-[#F5EBE6] text-[#10141E] border border-[#A85D45]/20 transition-colors shadow-sm"
             >
-              <ZoomOut className="w-4 h-4" />
+              <ZoomOut className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
             <button
               onClick={handleResetZoom}
               title="Reset Zoom"
-              className="p-2 rounded-lg bg-white hover:bg-[#F5EBE6] text-[#10141E] border border-[#A85D45]/20 transition-colors text-xs font-mono shadow-sm font-semibold"
+              className="hidden sm:block p-2 rounded-lg bg-white hover:bg-[#F5EBE6] text-[#10141E] border border-[#A85D45]/20 transition-colors text-xs font-mono shadow-sm font-semibold"
             >
               1:1
             </button>
             <button
               onClick={closeFloorPlan}
               title="Close"
-              className="p-2 rounded-lg bg-[#FAF7F2] hover:bg-red-50 text-[#5A6474] hover:text-red-500 transition-colors ml-2"
+              className="p-1.5 sm:p-2 rounded-lg bg-[#FAF7F2] hover:bg-red-50 text-[#5A6474] hover:text-red-500 transition-colors ml-1 sm:ml-2"
             >
-              <X className="w-5 h-5" />
+              <X className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
         </div>
