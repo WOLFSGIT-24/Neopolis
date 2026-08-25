@@ -1,12 +1,12 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import { Trees, Waves, Building } from 'lucide-react'
+import { TreePine, Waves, Building2, Leaf } from 'lucide-react'
 
 export default function LocationSection() {
   const highlights = [
     {
-      icon: Trees,
+      icon: Leaf,
       stat: '1,00,000+',
       unit: 'Acres',
       label: '111 GO Protected Greens',
@@ -20,7 +20,7 @@ export default function LocationSection() {
       desc: 'Mesmerizing sunset horizons reflecting over the tranquil waters of Osman Sagar.',
     },
     {
-      icon: Building,
+      icon: Building2,
       stat: 'Financial District',
       unit: 'Skyline',
       label: 'High-Growth Tech Corridor',
@@ -54,7 +54,7 @@ export default function LocationSection() {
                   </p>
                 </div>
                 <div className="w-9 h-9 rounded-full bg-[#F5EBE6] flex items-center justify-center text-[#A85D45]">
-                  <Trees className="w-5 h-5" />
+                  <TreePine className="w-5 h-5" />
                 </div>
               </div>
             </div>
