@@ -79,9 +79,6 @@ export default function Skydeck() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
 
-            <div className="absolute top-5 left-5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#A85D45]/20 text-xs text-[#A85D45] font-mono font-semibold shadow-md">
-              0{activeItem + 1} / 0{skyFeatures.length} • Skydeck Sanctuary
-            </div>
 
             <div className="absolute bottom-6 left-6 right-6 space-y-1.5">
               <span className="text-xs uppercase tracking-[0.2em] text-[#E8C5B8] font-mono font-semibold">
