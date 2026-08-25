@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { Compass, Moon, Sun, Wind, Eye, Coffee, Waves, ArrowRight } from 'lucide-react'
+import { Compass, ArrowRight } from 'lucide-react'
 
 export default function Skydeck() {
   const [activeItem, setActiveItem] = useState(0)
@@ -12,42 +12,36 @@ export default function Skydeck() {
       tagline: 'High Altitude Starlight Concerts',
       image: '/neo-assets/lifeatneo/skydeck/sky_amphithetre.jpg',
       desc: 'Terraced open sky auditorium located on Level 59, featuring bespoke acoustic enclosures for intimate musical performances and sunset screenings.',
-      icon: Moon,
     },
     {
       title: 'Surya Namaskar Lawn',
       tagline: 'Dawn Yoga at 200 Metres',
       image: '/neo-assets/lifeatneo/skydeck/suryanamaskar_lawn.jpg',
       desc: 'Lush natural turf rooftop meditation deck facing east, greeting the morning sunrise over Hyderabad’s tranquil lakes.',
-      icon: Sun,
     },
     {
       title: 'The Sky Trail & Promenade',
       tagline: 'Cloud Level Jogging Circuit',
       image: '/neo-assets/lifeatneo/skydeck/skydeck.jpg',
       desc: 'A continuous glass balustraded jogging track tracing the perimeter of both towers with thrilling 360 degree horizon vistas.',
-      icon: Wind,
     },
     {
       title: 'Star Map & Astronomy Deck',
       tagline: 'Gaze into the Cosmos',
       image: '/neo-assets/home/skydeck.jpg',
       desc: 'Deep observation deck equipped with high powered astronomical telescopes and celestial constellation guides away from ground light pollution.',
-      icon: Eye,
     },
     {
       title: 'Sky Café & High Tea Bar',
       tagline: 'Bespoke Brews with Cloud Views',
       image: '/neo-assets/lifeatneo/carousel-images/riseabove.jpg',
       desc: 'Artisanal roastery and open air rooftop bar serving hand crafted mocktails and continental appetizers at twilight.',
-      icon: Coffee,
     },
     {
       title: 'Rooftop Infinity Edge',
       tagline: 'Swimming in the Stratosphere',
       image: '/neo-assets/clubneo/infinity-pool.png',
       desc: 'An architectural marvel where zero edge crystal waters visually blend with the vast Telangana sky.',
-      icon: Waves,
     },
   ]
 
@@ -110,34 +104,24 @@ export default function Skydeck() {
 
             <div className="space-y-2">
               {skyFeatures.map((item, idx) => {
-                const Icon = item.icon
                 const isActive = activeItem === idx
                 return (
                   <button
                     key={idx}
                     onClick={() => setActiveItem(idx)}
-                    className={`w-full p-3.5 rounded-xl text-left transition-all duration-300 flex items-center justify-between border shadow-sm ${
+                    className={`w-full p-3.5 sm:p-4 rounded-xl text-left transition-all duration-300 flex items-center justify-between border shadow-sm ${
                       isActive
                         ? 'bg-white border-[#A85D45] shadow-md ring-1 ring-[#A85D45] translate-x-1'
                         : 'bg-white/80 border-[#A85D45]/15 hover:border-[#A85D45]/50 text-[#5A6474] hover:text-[#10141E]'
                     }`}
                   >
-                    <div className="flex items-center gap-3">
-                      <div
-                        className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                          isActive ? 'bg-[#A85D45] text-white' : 'bg-[#F5EBE6] text-[#A85D45]'
-                        }`}
-                      >
-                        <Icon className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <span className="text-[10px] font-mono text-[#A85D45] font-bold block">
-                          0{idx + 1}
-                        </span>
-                        <h4 className={`text-sm font-serif ${isActive ? 'text-[#10141E] font-semibold' : 'text-[#5A6474]'}`}>
-                          {item.title}
-                        </h4>
-                      </div>
+                    <div>
+                      <span className="text-[10px] sm:text-xs font-mono text-[#A85D45] font-bold block">
+                        0{idx + 1}
+                      </span>
+                      <h4 className={`text-sm sm:text-base font-serif ${isActive ? 'text-[#10141E] font-semibold' : 'text-[#5A6474]'}`}>
+                        {item.title}
+                      </h4>
                     </div>
 
                     <ArrowRight
