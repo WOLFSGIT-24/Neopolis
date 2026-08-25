@@ -134,10 +134,6 @@ export default function Sustainability() {
                   </p>
                 </div>
 
-                <div className="pt-4 mt-6 border-t border-black/5 flex items-center gap-1.5 text-[11px] text-[#A85D45] font-mono font-semibold">
-                  <span className="w-1 h-1 rounded-full bg-[#A85D45]" />
-                  <span>Eco Standard</span>
-                </div>
               </div>
             )
           })}
