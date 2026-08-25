@@ -1,10 +1,12 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function LifeAtNeo() {
   const [activeIdx, setActiveIdx] = useState(0)
+  const touchStartX = useRef<number | null>(null)
+  const touchEndX = useRef<number | null>(null)
 
   const groundSpaces = [
     {
@@ -47,16 +49,40 @@ export default function LifeAtNeo() {
     setActiveIdx((prev) => (prev === groundSpaces.length - 1 ? 0 : prev + 1))
   }
 
+  // Touch handlers for responsive mobile swiping
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX
+  }
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX
+  }
+
+  const onTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return
+    const distance = touchStartX.current - touchEndX.current
+    const minSwipeDistance = 45
+
+    if (distance > minSwipeDistance) {
+      handleNext()
+    } else if (distance < -minSwipeDistance) {
+      handlePrev()
+    }
+
+    touchStartX.current = null
+    touchEndX.current = null
+  }
+
   return (
-    <section id="life-at-neo" className="relative w-full py-24 sm:py-32 bg-[#FAF7F2] text-[#10141E] overflow-hidden">
+    <section id="life-at-neo" className="relative w-full py-20 sm:py-32 bg-[#FAF7F2] text-[#10141E] overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* Editorial Statement */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end mb-12 sm:mb-16">
           <div className="lg:col-span-6 space-y-3">
             <span className="text-xs uppercase tracking-[0.3em] text-[#A85D45] font-semibold block">
               02 • Lifestyle Architecture
             </span>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
+            <h2 className="text-3xl sm:text-6xl md:text-7xl font-serif font-light text-[#10141E] leading-[1.05]">
               Life, <br />
               <span className="text-[#A85D45] font-normal">elevated</span>
             </h2>
@@ -66,7 +92,7 @@ export default function LifeAtNeo() {
             <p className="text-base sm:text-lg text-[#10141E]/90 font-serif leading-relaxed">
               Every layer of Neo is designed to make everyday living feel extraordinary, from landscaped gardens at ground level to private experiences high above the city.
             </p>
-            <div className="flex items-center gap-4 pt-2">
+            <div className="flex items-center gap-4 pt-1 sm:pt-2">
               <span className="text-xs uppercase tracking-[0.2em] text-[#A85D45] font-semibold">
                 Ground Level: Shaped by what you love
               </span>
@@ -75,24 +101,42 @@ export default function LifeAtNeo() {
         </div>
 
         {/* Interactive Showcase with Carousel Controls */}
-        <div className="relative">
+        <div
+          className="relative"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
           {/* Main Featured Showcase Card */}
           <div className="relative rounded-2xl overflow-hidden border border-[#A85D45]/20 shadow-xl bg-white">
-            <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[480px]">
-              {/* Image side */}
-              <div className="lg:col-span-8 relative min-h-[320px] sm:min-h-[420px] overflow-hidden">
-                <Image
-                  src={groundSpaces[activeIdx].image}
-                  alt={groundSpaces[activeIdx].title}
-                  fill
-                  className="object-cover object-center transition-all duration-700 ease-out"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/50 via-transparent to-transparent" />
+            <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[440px] sm:min-h-[480px]">
+              {/* Fast Hardware-Accelerated Sliding Image Track */}
+              <div className="lg:col-span-8 relative min-h-[280px] sm:min-h-[420px] overflow-hidden bg-[#10141E]">
+                <div
+                  className="flex h-full w-full transition-transform duration-300 ease-out will-change-transform"
+                  style={{ transform: `translateX(-${activeIdx * 100}%)` }}
+                >
+                  {groundSpaces.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="relative min-w-full h-full min-h-[280px] sm:min-h-[420px] shrink-0"
+                    >
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        priority={idx <= 1}
+                        className="object-cover object-center"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/50 via-transparent to-transparent" />
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* Text info side */}
-              <div className="lg:col-span-4 p-8 sm:p-10 flex flex-col justify-between bg-white border-t lg:border-t-0 lg:border-l border-[#A85D45]/15">
-                <div className="space-y-4">
+              <div className="lg:col-span-4 p-6 sm:p-10 flex flex-col justify-between bg-white border-t lg:border-t-0 lg:border-l border-[#A85D45]/15">
+                <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono text-[#A85D45] font-bold">
                       0{activeIdx + 1} / 0{groundSpaces.length}
@@ -108,39 +152,42 @@ export default function LifeAtNeo() {
                   <p className="text-xs uppercase tracking-wider text-[#A85D45] font-semibold">
                     {groundSpaces[activeIdx].subtitle}
                   </p>
-                  <p className="text-xs sm:text-sm text-[#5A6474] leading-relaxed pt-2">
+                  <p className="text-xs sm:text-sm text-[#5A6474] leading-relaxed pt-1">
                     {groundSpaces[activeIdx].desc}
                   </p>
                 </div>
 
                 {/* Arrow Controls */}
-                <div className="flex items-center gap-3 pt-8">
+                <div className="flex items-center gap-3 pt-6 sm:pt-8">
                   <button
                     onClick={handlePrev}
                     aria-label="Previous space"
-                    className="p-3 rounded-full bg-[#F3ECE2] hover:bg-[#A85D45] hover:text-white text-[#10141E] border border-[#A85D45]/20 transition-colors shadow-sm"
+                    className="p-3 rounded-full bg-[#F3ECE2] hover:bg-[#A85D45] hover:text-white text-[#10141E] border border-[#A85D45]/20 active:scale-95 transition-all shadow-sm"
                   >
                     <ChevronLeft className="w-4 h-4" />
                   </button>
                   <button
                     onClick={handleNext}
                     aria-label="Next space"
-                    className="p-3 rounded-full bg-[#F3ECE2] hover:bg-[#A85D45] hover:text-white text-[#10141E] border border-[#A85D45]/20 transition-colors shadow-sm"
+                    className="p-3 rounded-full bg-[#F3ECE2] hover:bg-[#A85D45] hover:text-white text-[#10141E] border border-[#A85D45]/20 active:scale-95 transition-all shadow-sm"
                   >
                     <ChevronRight className="w-4 h-4" />
                   </button>
+                  <span className="text-[11px] text-[#8C97A7] font-mono sm:hidden ml-2">
+                    Swipe left/right to view
+                  </span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Thumbnail Strip */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 mt-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5 sm:gap-3 mt-3 sm:mt-4">
             {groundSpaces.map((item, idx) => (
               <button
                 key={idx}
                 onClick={() => setActiveIdx(idx)}
-                className={`p-2.5 rounded-xl text-left transition-all duration-300 border shadow-sm ${
+                className={`p-2.5 rounded-xl text-left transition-all duration-200 border shadow-sm ${
                   activeIdx === idx
                     ? 'bg-white border-[#A85D45] shadow-md ring-1 ring-[#A85D45]'
                     : 'bg-white/80 border-[#A85D45]/15 hover:border-[#A85D45]/50'
