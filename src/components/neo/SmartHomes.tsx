@@ -7,11 +7,46 @@ import {
   Clock,
   SunMedium,
   Network,
-  Globe,
   ShieldCheck,
   ChevronLeft,
   ChevronRight,
 } from 'lucide-react'
+
+function GlobeMobileSyncIcon({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      {/* Globe Top-Left */}
+      <circle cx="7" cy="7" r="4.8" />
+      <line x1="2.2" y1="7" x2="11.8" y2="7" />
+      <path d="M7 2.2C5.5 3.8 4.8 5.4 4.8 7s.7 3.2 2.2 4.8" />
+      <path d="M7 2.2C8.5 3.8 9.2 5.4 9.2 7s-.7 3.2-2.2 4.8" />
+
+      {/* Phone Bottom-Right */}
+      <rect x="13.5" y="11" width="7.5" height="11" rx="1.5" />
+      <line x1="13.5" y1="13" x2="21" y2="13" />
+      <line x1="13.5" y1="19.5" x2="21" y2="19.5" />
+      <circle cx="17.25" cy="20.5" r="0.4" fill="currentColor" />
+      {/* Screen diagonal glint */}
+      <line x1="15.5" y1="15" x2="19" y2="18.5" strokeWidth="1.4" />
+
+      {/* Arrow from Globe to Phone (Top-Right) */}
+      <path d="M12.5 6.2h2a2.8 2.8 0 0 1 2.8 2.8v1.5" />
+      <polyline points="15.5 9 17.3 10.8 19.1 9" />
+
+      {/* Arrow from Phone to Globe (Bottom-Left) */}
+      <path d="M12 18.5h-2a2.8 2.8 0 0 1-2.8-2.8v-1.5" />
+      <polyline points="8.8 15.7 7.2 13.9 5.4 15.7" />
+    </svg>
+  )
+}
 
 export default function SmartHomes() {
   const [activeFeature, setActiveFeature] = useState(0)
@@ -55,7 +90,7 @@ export default function SmartHomes() {
       status: 'Modular Bus',
     },
     {
-      icon: Globe,
+      icon: GlobeMobileSyncIcon,
       title: 'Global Remote Access',
       desc: 'Monitor door locks, security cameras, access authorizations and power consumption from anywhere across the globe.',
       status: '256 Bit Encrypted',
