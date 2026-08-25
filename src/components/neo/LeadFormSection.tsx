@@ -13,13 +13,31 @@ export default function LeadFormSection() {
     preferredTime: 'Morning (9 AM to 12 PM)',
   })
 
+  const handleNameKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    // Allow navigation, control keys, backspace, delete, tab, and letters/spaces only
+    const allowedSpecialKeys = ['Backspace', 'Delete', 'Tab', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End']
+    if (allowedSpecialKeys.includes(e.key) || e.ctrlKey || e.metaKey) return
+    if (!/^[a-zA-Z\s]$/.test(e.key)) {
+      e.preventDefault()
+    }
+  }
+
+  const handlePhoneKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    // Allow navigation, control keys, backspace, delete, tab, and digits 0-9 only
+    const allowedSpecialKeys = ['Backspace', 'Delete', 'Tab', 'ArrowLeft', 'ArrowRight', 'Home', 'End']
+    if (allowedSpecialKeys.includes(e.key) || e.ctrlKey || e.metaKey) return
+    if (!/^[0-9]$/.test(e.key)) {
+      e.preventDefault()
+    }
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setErrorMessage('')
 
     // Strict validation
     if (formData.name.trim().length < 2) {
-      setErrorMessage('Please enter a valid name (at least 2 letters).')
+      setErrorMessage('Please enter a valid name (at least 2 letters, no numbers).')
       return
     }
 
@@ -140,6 +158,7 @@ export default function LeadFormSection() {
                         required
                         placeholder="Enter your full name"
                         value={formData.name}
+                        onKeyDown={handleNameKeyDown}
                         onChange={(e) =>
                           setFormData({
                             ...formData,
@@ -165,8 +184,9 @@ export default function LeadFormSection() {
                           inputMode="numeric"
                           required
                           maxLength={10}
-                          placeholder="10-digit mobile number"
+                          placeholder="XXXXX XXXXX"
                           value={formData.phone}
+                          onKeyDown={handlePhoneKeyDown}
                           onChange={(e) =>
                             setFormData({
                               ...formData,
@@ -175,7 +195,7 @@ export default function LeadFormSection() {
                           }
                           pattern="[0-9]{10}"
                           title="Please enter a valid 10-digit mobile number"
-                          className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-xl pl-10 pr-4 py-3 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors"
+                          className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-xl pl-10 pr-4 py-3 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors font-mono"
                         />
                       </div>
                     </div>

@@ -15,13 +15,29 @@ export default function BrochureModal() {
 
   if (!isBrochureOpen) return null
 
+  const handleNameKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const allowedSpecialKeys = ['Backspace', 'Delete', 'Tab', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End']
+    if (allowedSpecialKeys.includes(e.key) || e.ctrlKey || e.metaKey) return
+    if (!/^[a-zA-Z\s]$/.test(e.key)) {
+      e.preventDefault()
+    }
+  }
+
+  const handlePhoneKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const allowedSpecialKeys = ['Backspace', 'Delete', 'Tab', 'ArrowLeft', 'ArrowRight', 'Home', 'End']
+    if (allowedSpecialKeys.includes(e.key) || e.ctrlKey || e.metaKey) return
+    if (!/^[0-9]$/.test(e.key)) {
+      e.preventDefault()
+    }
+  }
+
   const handleDownload = async (e: React.FormEvent) => {
     e.preventDefault()
     setErrorMessage('')
 
     // Strict validation
     if (formData.name.trim().length < 2) {
-      setErrorMessage('Please enter a valid name (at least 2 letters).')
+      setErrorMessage('Please enter a valid name (at least 2 letters, no numbers).')
       return
     }
 
@@ -130,6 +146,7 @@ export default function BrochureModal() {
                   required
                   placeholder="Enter your full name"
                   value={formData.name}
+                  onKeyDown={handleNameKeyDown}
                   onChange={(e) =>
                     setFormData({
                       ...formData,
@@ -151,8 +168,9 @@ export default function BrochureModal() {
                   inputMode="numeric"
                   required
                   maxLength={10}
-                  placeholder="10-digit mobile number"
+                  placeholder="XXXXX XXXXX"
                   value={formData.phone}
+                  onKeyDown={handlePhoneKeyDown}
                   onChange={(e) =>
                     setFormData({
                       ...formData,
@@ -161,7 +179,7 @@ export default function BrochureModal() {
                   }
                   pattern="[0-9]{10}"
                   title="Please enter a valid 10-digit mobile number"
-                  className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg px-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors"
+                  className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg px-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors font-mono"
                 />
               </div>
 
@@ -175,7 +193,7 @@ export default function BrochureModal() {
                   placeholder="name@domain.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value.trim() })}
-                  pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                  pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
                   title="Please enter a valid email address (e.g. name@domain.com)"
                   className="w-full bg-[#FAF7F2] border border-[#A85D45]/20 rounded-lg px-4 py-2.5 text-sm text-[#10141E] placeholder-gray-400 focus:outline-none focus:border-[#A85D45] transition-colors"
                 />
