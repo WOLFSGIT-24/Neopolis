@@ -33,8 +33,8 @@ export default function BrochureModal() {
 
   const triggerFileDownload = () => {
     const link = document.createElement('a')
-    link.href = '/neo-assets/neo-brochure.pdf'
-    link.download = 'Neo_Towers_Official_Brochure.pdf'
+    link.href = '/neo-assets/Neo%20Main%20Brochure.pdf'
+    link.download = 'Neo_Towers_Main_Brochure.pdf'
     link.target = '_blank'
     document.body.appendChild(link)
     link.click()
