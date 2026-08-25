@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { Briefcase, Users, Video, Wifi, Monitor } from 'lucide-react'
 
 export default function SkyOffice() {
   const [activeImage, setActiveImage] = useState(0)
@@ -26,27 +25,22 @@ export default function SkyOffice() {
 
   const features = [
     {
-      icon: Briefcase,
       title: 'Executive Office Suites',
       desc: 'Private sound insulated private cabins with commanding corner vistas for focused leadership.',
     },
     {
-      icon: Users,
       title: 'Open Sky Co working Lounges',
       desc: 'Collaborative hot desks and designer breakout tables illuminated by natural daylight.',
     },
     {
-      icon: Video,
       title: 'High Tech Boardrooms',
       desc: 'Equipped with 4K interactive presentation displays and hybrid video conferencing hardware.',
     },
     {
-      icon: Monitor,
       title: 'Plug & Play Workstations',
       desc: 'Ergonomic Herman Miller seating with high speed dual redundant fiber connections.',
     },
     {
-      icon: Wifi,
       title: 'Acoustic Meeting Pods',
       desc: 'Zero distraction private phone booths and client briefing pods on Levels 48 & 49.',
     },
@@ -121,27 +115,19 @@ export default function SkyOffice() {
             </div>
 
             <div className="space-y-3">
-              {features.map((feat, idx) => {
-                const Icon = feat.icon
-                return (
-                  <div
-                    key={idx}
-                    className="p-4 rounded-xl bg-white border border-[#A85D45]/15 hover:border-[#A85D45]/60 transition-all flex items-start gap-4 shadow-sm"
-                  >
-                    <div className="w-9 h-9 rounded-xl bg-[#F5EBE6] flex items-center justify-center text-[#A85D45] shrink-0 mt-0.5 font-bold">
-                      <Icon className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-serif text-[#10141E] font-semibold">
-                        {feat.title}
-                      </h4>
-                      <p className="text-xs text-[#5A6474] leading-relaxed mt-0.5">
-                        {feat.desc}
-                      </p>
-                    </div>
-                  </div>
-                )
-              })}
+              {features.map((feat, idx) => (
+                <div
+                  key={idx}
+                  className="p-4 rounded-xl bg-white border border-[#A85D45]/15 hover:border-[#A85D45]/60 transition-all shadow-sm space-y-1"
+                >
+                  <h4 className="text-sm font-serif text-[#10141E] font-semibold">
+                    {feat.title}
+                  </h4>
+                  <p className="text-xs text-[#5A6474] leading-relaxed">
+                    {feat.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
