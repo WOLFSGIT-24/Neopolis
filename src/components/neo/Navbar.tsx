@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useNeoModal } from './context/NeoModalContext'
-import { Menu, X, Download, PhoneCall } from 'lucide-react'
+import { Menu, X, Download } from 'lucide-react'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -34,8 +34,8 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-[#FAF7F2]/95 backdrop-blur-xl border-b border-[#A85D45]/20 py-3 shadow-md'
-            : 'bg-gradient-to-b from-[#FAF7F2]/95 via-[#FAF7F2]/60 to-transparent py-5 sm:py-6'
+            ? 'bg-[#FAF7F2]/95 backdrop-blur-xl border-b border-[#A85D45]/20 py-3.5 shadow-md'
+            : 'bg-transparent py-5 sm:py-6'
         }`}
       >
         <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
@@ -46,21 +46,31 @@ export default function Navbar() {
               alt="n·eo Towers"
               width={110}
               height={45}
-              className="h-9 sm:h-11 w-auto object-contain brightness-90 contrast-125"
+              className="h-9 sm:h-11 w-auto object-contain brightness-95 contrast-125"
               priority
             />
           </Link>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[13px] uppercase tracking-[0.18em] font-medium text-[#10141E]/80">
+          <nav
+            className={`hidden lg:flex items-center gap-6 xl:gap-8 text-[13px] uppercase tracking-[0.18em] font-medium transition-colors duration-300 ${
+              scrolled ? 'text-[#10141E]/80' : 'text-white/90 drop-shadow-sm'
+            }`}
+          >
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="relative py-1 hover:text-[#A85D45] transition-colors duration-300 group whitespace-nowrap"
+                className={`relative py-1 transition-colors duration-300 group whitespace-nowrap ${
+                  scrolled ? 'hover:text-[#A85D45]' : 'hover:text-[#E8C5B8]'
+                }`}
               >
                 <span>{link.label}</span>
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1.5px] bg-[#A85D45] transition-all duration-300 group-hover:w-full" />
+                <span
+                  className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1.5px] transition-all duration-300 group-hover:w-full ${
+                    scrolled ? 'bg-[#A85D45]' : 'bg-[#E8C5B8]'
+                  }`}
+                />
               </a>
             ))}
           </nav>
@@ -69,15 +79,23 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={() => openBrochure()}
-              className="hidden xl:flex items-center gap-1.5 px-4 py-2 rounded-full text-[11px] uppercase tracking-[0.2em] font-semibold text-[#A85D45] border border-[#A85D45]/30 hover:border-[#A85D45] hover:bg-[#A85D45]/10 transition-all whitespace-nowrap"
+              className={`hidden xl:flex items-center gap-1.5 px-4 py-2 rounded-full text-[11px] uppercase tracking-[0.2em] font-semibold transition-all whitespace-nowrap ${
+                scrolled
+                  ? 'text-[#A85D45] border border-[#A85D45]/30 hover:border-[#A85D45] hover:bg-[#A85D45]/10'
+                  : 'text-white border border-white/40 hover:border-white hover:bg-white/10 backdrop-blur-sm'
+              }`}
             >
-              <Download className="w-3.5 h-3.5" />
+              <Download className={`w-3.5 h-3.5 ${scrolled ? 'text-[#A85D45]' : 'text-[#E8C5B8]'}`} />
               <span>Brochure</span>
             </button>
 
             <button
               onClick={() => openEnquiry('Navbar Enquire')}
-              className="relative px-5 sm:px-6 py-2 sm:py-2.5 rounded-full text-[12px] uppercase tracking-[0.2em] font-semibold text-white bg-gradient-to-r from-[#C98D78] via-[#B8735C] to-[#A85D45] hover:opacity-95 hover:shadow-lg hover:shadow-[#A85D45]/25 active:scale-95 transition-all duration-300 whitespace-nowrap shadow-sm"
+              className={`relative px-5 sm:px-6 py-2 sm:py-2.5 rounded-full text-[12px] uppercase tracking-[0.2em] font-semibold active:scale-95 transition-all duration-300 whitespace-nowrap shadow-sm ${
+                scrolled
+                  ? 'text-white bg-gradient-to-r from-[#C98D78] via-[#B8735C] to-[#A85D45] hover:opacity-95 hover:shadow-lg hover:shadow-[#A85D45]/25'
+                  : 'bg-gradient-to-r from-[#E8C5B8] via-[#C98D78] to-[#A86D58] text-[#10131A] font-bold hover:shadow-xl hover:shadow-[#C98D78]/30'
+              }`}
             >
               Enquire Now
             </button>
@@ -87,14 +105,20 @@ export default function Navbar() {
           <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={() => openEnquiry('Mobile Header Enquire')}
-              className="px-3.5 py-1.5 rounded-full text-[11px] uppercase tracking-wider font-semibold text-white bg-[#A85D45]"
+              className={`px-3.5 py-1.5 rounded-full text-[11px] uppercase tracking-wider font-semibold shadow-sm ${
+                scrolled
+                  ? 'text-white bg-[#A85D45]'
+                  : 'bg-gradient-to-r from-[#E8C5B8] via-[#C98D78] to-[#A86D58] text-[#10131A]'
+              }`}
             >
               Enquire
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
-              className="p-2 rounded-lg text-[#10141E] hover:bg-black/5 transition-colors"
+              className={`p-2 rounded-lg transition-colors ${
+                scrolled ? 'text-[#10141E] hover:bg-black/5' : 'text-white hover:bg-white/10'
+              }`}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
